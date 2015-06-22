@@ -40,7 +40,7 @@ class BuildGUI(Frame):
         #Sets up the variables we are going to use for the window
         self.spinVarStart = StringVar()  # spinner variable for the beginning year
         self.spinVarRange = StringVar()  # spinner value for the range of years
-        self.genderVar = StringVar() #determines what gender we are using
+        self.hivVar = StringVar() #determines whether we are using birth or death
         self.errorVar = StringVar()  ##This variable is for displaying a message regarding certain range errors
         self.countryVar = StringVar() #determines what country we are using
         ####################################################
@@ -120,17 +120,21 @@ class BuildGUI(Frame):
         labelText = "Select a region/demographic:"
         self.labelCountry = Label(self.root, text=labelText,
                                   justify=LEFT).grid(row=1, column=2, sticky=N+W)
-        self.labelGenderText = Label(self.root, text="Select gender")
-        self.labelGenderText.grid(row=2, column=1, sticky=W)
+        self.labelHIVText = Label(self.root, text="Select HIV data")
+        self.labelHIVText.grid(row=2, column=1, sticky=W)
         ####################################################
         #Creates the radio buttons. I designed it to be modular so I can swap out data easily.
         self.dataInsert = []
         #---#
-        self.listRB = [["Total", "total"], ["Female", "female"], ["Male", "male"]]
+        self.listRB = [["Women's share of population ages 15+ living with HIV (%)", "Women's share of population ages 15+ living with HIV (%)"],
+                       ["Prevalence of HIV, total (% of population ages 15-49)", "Prevalence of HIV, total (% of population ages 15-49)"],
+                       ["Prevalence of HIV, female (% ages 15-24)", "Prevalence of HIV, female (% ages 15-24)"],
+                       ["Prevalence of HIV, male (% ages 15-24)","Prevalence of HIV, male (% ages 15-24)"],
+                       ["Antiretroviral therapy coverage (% of people living with HIV)", "Antiretroviral therapy coverage (% of people living with HIV)"]]
 
         #cycles through the data provided to create the buttons
         for idxCreate, valueCreate in enumerate(self.listRB):
-            radioInsert =  Radiobutton(self.root, text=valueCreate[0], variable=self.genderVar,
+            radioInsert =  Radiobutton(self.root, text=valueCreate[0], variable=self.hivVar,
                                         value=valueCreate[1], command=self.selectStuff)
             radioInsert.grid(row=idxCreate+3, column=1, sticky=W)
             self.dataInsert.append(radioInsert)
@@ -143,7 +147,7 @@ class BuildGUI(Frame):
             idxCreate = 0
         self.rowCanvasLast = idxCreate + 5
 
-        self.labelRadio = Label(self.root, height='2', width='38', anchor='w',
+        self.labelRadio = Label(self.root, height='3', width='45', anchor='w',
                                 justify=LEFT)
         self.labelRadio.grid(row=idxCreate+4, column=1, sticky=W)
 
@@ -168,7 +172,7 @@ class BuildGUI(Frame):
         ####################################################
         #Creates the range of regions/demographics
         #---#
-        sql1 = "SELECT Country FROM female_lifespan ORDER BY Country ASC"
+        sql1 = "SELECT Country FROM \"Women's share of population ages 15+ living with HIV (%)\" ORDER BY Country ASC"
         insertList = [self.DEFAULT_TEXT_COMBO_BOX]
         maxLength = 0
         results = []
@@ -211,18 +215,18 @@ class BuildGUI(Frame):
     def selectStuff(self):
         #What to do when an activation event has been triggered.
         self.checkRange()
-        # sets the gender and region/demographic for our program
-        selectionGender = ''
+        # sets the birth/death and region/demographic for our program
+        selectioHIV = ''
 
         #Sees if you have selected a region/demographic or not.
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
             #---#
-            selectionGender = "%s %s life expectency from birth." % (str(self.countryVar.get()),
-                                                                     str(self.genderVar.get()))
+            selectioHIV = "%s \n%s." % (str(self.countryVar.get()),
+                                                  str(self.hivVar.get()))
         else:
             #---#
-            selectionGender = '''Please select a region/demographic for lifespan \nexpectency data on its %s population.''' % (str(self.genderVar.get()))
-        self.labelRadio['text']=selectionGender
+            selectioHIV = '''Please select a region/demographic for \n%s.''' % (str(self.hivVar.get()))
+        self.labelRadio['text']=selectioHIV
         #selectionRegion = str(self.countryVar.get())
         self.callGraph()
 
@@ -289,13 +293,14 @@ class BuildGUI(Frame):
     def callGraph(self):
         # This calls the graph function
 
-        graphYAge = [] #The ages that are called
+        graphYRate = [] #The ages that are called
         graphXYear = [] #The range of years we will use
         #graph0Values = [0] #This was meant for a possible situation where the values are empty, but currently
         #the way it's set up, the empty values default to 0 when being entered.
         #########################
         #---#
-        sqlGraph = 'SELECT * FROM %s_lifespan WHERE Country="%s"' % (str(self.genderVar.get()), str(self.countryVar.get()))
+        sqlGraph = 'SELECT * FROM \"%s\" WHERE Country="%s"' % (str(self.hivVar.get()), str(self.countryVar.get()))
+
         countryName = ''
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
             try:
@@ -310,7 +315,7 @@ class BuildGUI(Frame):
                 for idx, rowSQL in enumerate(convertedSQL[self.indexStartYear:self.indexStartYear + self.rangeIndex]):
                     #
                     graphXYear.append(str(self.startYear + idx))
-                    graphYAge.append(rowSQL)
+                    graphYRate.append(rowSQL)
             except:
                 print("Error: unable to retrieve data.")
             # Working on getting the stuff to display
@@ -325,28 +330,27 @@ class BuildGUI(Frame):
         #Sets the x and y axis labels.
         ax.set_xlabel('Year')
         #---#
-        ax.set_ylabel("Age (Years).")
+        ax.set_ylabel("Percent.")
 
 
         #If there is a region/demographic selected
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
             #sets up the range of years to be used.
             x = np.arange(len(graphXYear))
-            #Sets up the bars to be used, x is the order of the bars, graphYAge is the height
-            plt.bar(x, graphYAge, color='aqua', width=.8, align='center')
+            #Sets up the bars to be used, x is the order of the bars, graphYRate is the height
+            plt.bar(x, graphYRate, color='aqua', width=.8, align='center')
             plt.xticks(x, graphXYear, rotation=90) #Sets up the ticks to be used
             minWidthCheck = len(graphXYear) * .4 #Sets up a minimum width
             plt.axis([-0, self.rangeIndex, 0, self.MAX_Y_TICK]) #-#Sets up the axis limits, this case,
             plt.grid(True)
             #---#
-            infoTitle = "%s Life Expectency From Birth For The \n%s Population\nOver A %s Year Period." % (countryName,
-                                                                                                           str(self.genderVar.get().capitalize()),
-                                                                                                           str(self.rangeIndex))
+            infoTitle = "\n%s \n%s \nOver A %s Year Period." % (
+                countryName, str(self.hivVar.get().capitalize()), str(self.rangeIndex))
             plt.title(infoTitle)
 
             #---#
             #Not necessary, but it adds the exact values alongside the graph bars, stating "No data available" if there is a 0
-            for idx, check0 in enumerate(graphYAge):
+            for idx, check0 in enumerate(graphYRate):
                 if check0 == 0:
                     insertText = "No data available."
                 else:
@@ -385,8 +389,8 @@ if __name__ == "__main__":
     rootB = Tk()
 
 
-    rootB.title("Life Expectency For Various Regions/Demographics Sorted By Gender.")
-    sqlLocations = '../AllData/LifeExpectency.sqlite'
+    rootB.title("HIV Statistics.")
+    sqlLocations = '../../AllData/SQL_HIV_Rate.sqlite'
     sqlDB = sqlite3.connect(sqlLocations)
 
     guiBuild = BuildGUI(rootB, sqlDB)

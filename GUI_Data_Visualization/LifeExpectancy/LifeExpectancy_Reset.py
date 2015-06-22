@@ -2,8 +2,8 @@ import csv
 import sqlite3
 #This file uses data from http://data.worldbank.org/topic/health
 #This program is meant to clear the database before running.
-f = open("../AllData/8_Topic_en_csv_v2.csv", encoding="utf8")
-sqlLocation = '../AllData/LifeExpectency.sqlite'
+f = open("../../AllData/8_Topic_en_csv_v2.csv", encoding="utf8")
+sqlLocation = '../../AllData/SQL_LifeExpectency_Rate.sqlite'
 START_YEARS = 1960
 LATEST_YEARS = 2015
 RANGE_YEARS = LATEST_YEARS-START_YEARS

@@ -143,7 +143,7 @@ class BuildGUI(Frame):
             idxCreate = 0
         self.rowCanvasLast = idxCreate + 5
 
-        self.labelRadio = Label(self.root, height='2', width='38', anchor='w',
+        self.labelRadio = Label(self.root, height='2', width='45', anchor='w',
                                 justify=LEFT)
         self.labelRadio.grid(row=idxCreate+4, column=1, sticky=W)
 
@@ -217,7 +217,7 @@ class BuildGUI(Frame):
         #Sees if you have selected a region/demographic or not.
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
             #---#
-            selectionBD = "%s %ss per 1000 people." % (str(self.countryVar.get()), str(self.bdVar.get()))
+            selectionBD = "%s %ss \nper 1000 people." % (str(self.countryVar.get()), str(self.bdVar.get()))
         else:
             #---#
             selectionBD = '''Please select a region/demographic for \n%ss per 1000 people.''' % (str(self.bdVar.get()))
@@ -384,7 +384,7 @@ if __name__ == "__main__":
 
 
     rootB.title("Births/Deaths Per 1000 People Various Regions/Demographics.")
-    sqlLocations = '../AllData/BirthDeath_Rate.sqlite'
+    sqlLocations = '../../AllData/SQL_BirthDeath_Rate.sqlite'
     sqlDB = sqlite3.connect(sqlLocations)
 
     guiBuild = BuildGUI(rootB, sqlDB)
