@@ -319,20 +319,33 @@ class BuildGUI(Frame):
             except:
                 print("Error: unable to retrieve data.")
             # Working on getting the stuff to display
-        #---# For ChildMortalityTotal
+        #---# For ChildMortalityTotal resizes the graph
         highestMagnitude = 0
+        highestValue = 0
+        halfSize = False
+        magnitudeYMap = 1
         for valueMagnitude in graphYDeaths:
             if valueMagnitude == 0:
-                pass
+                continue
             elif int(floor(log10(valueMagnitude))) > highestMagnitude:
                 highestMagnitude = int(log10(valueMagnitude))
+            if valueMagnitude > highestValue:   #We don't want to make the values look too small
+                highestValue = valueMagnitude
+                if log10(valueMagnitude)-int(floor(log10(valueMagnitude))) <0.5:
+                    halfSize = True
+                else:
+                    halfSize = False
+        if halfSize == True:
+            magnitudeYMap = 5 * 10 ** highestMagnitude
+        else:
+            magnitudeYMap = 10 * 10 ** highestMagnitude
         #Sets up the information behind the scenes for the canvas to display the bars
         plt.clf()
         self.fig = plt.gcf()
         self.canvas = FigureCanvasTkAgg(self.fig, self.root) #Allows the Canvas to interface with the GUI
         ax = self.fig.add_subplot(111) #Allows the graph information
         #---#Sets the y axis to be between 0 and 100, marking every 5 points
-        major_ticksY = np.arange(-0, 10 ** (highestMagnitude+1), 10 ** (highestMagnitude))
+        major_ticksY = np.arange(-0, magnitudeYMap, 10 ** (highestMagnitude))
         ax.set_yticks(major_ticksY)
         #Sets the x and y axis labels.
         ax.set_xlabel('Year')
@@ -348,7 +361,7 @@ class BuildGUI(Frame):
             plt.bar(x, graphYDeaths, color='aqua', width=.8, align='center')
             plt.xticks(x, graphXYear, rotation=90) #Sets up the ticks to be used
             minWidthCheck = len(graphXYear) * .4 #Sets up a minimum width
-            plt.axis([-0, self.rangeIndex, 0, 10 ** (highestMagnitude+1)]) #-#Sets up the axis limits, this case,
+            plt.axis([-0, self.rangeIndex, 0, magnitudeYMap]) #-#Sets up the axis limits, this case,
             plt.grid(True)
             #---#
             infoTitle = "\n%s \n%s \nOver A %s Year Period." % (
@@ -383,7 +396,7 @@ class BuildGUI(Frame):
             plt.xticks([ 0 ], ['No Data Selected']) #Creates no xticks
             infoTitle = "Please Select A Region/Demographic."
             plt.title(infoTitle)
-            plt.axis([-0, 1, 0, 10 ** (highestMagnitude+1)])
+            plt.axis([-0, 1, 0, magnitudeYMap])
 
 
         self.fig.set_size_inches(minWidthCheck, self.SIZE * .5) #Sets the size
@@ -400,7 +413,7 @@ class BuildGUI(Frame):
 if __name__ == "__main__":
     rootB = Tk()
 
-
+    #---#
     rootB.title("Child Mortality Statistics.")
     sqlLocations = '../../AllData/SQL_ChildMortalityTotal_Rate.sqlite'
     sqlDB = sqlite3.connect(sqlLocations)

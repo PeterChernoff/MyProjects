@@ -389,7 +389,7 @@ class BuildGUI(Frame):
 if __name__ == "__main__":
     rootB = Tk()
 
-
+    #---#
     rootB.title("HIV Statistics.")
     sqlLocations = '../../AllData/SQL_HIV_Rate.sqlite'
     sqlDB = sqlite3.connect(sqlLocations)
