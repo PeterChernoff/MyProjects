@@ -37,10 +37,11 @@ class BuildGUI(Frame):
         self.cursor = self.sqlCDB.cursor() #Set up the DB.
 
         ####################################################
+        #---#
         #Sets up the variables we are going to use for the window
         self.spinVarStart = StringVar()  # spinner variable for the beginning year
         self.spinVarRange = StringVar()  # spinner value for the range of years
-        self.bdVar = StringVar() #determines whether we are using birth or death
+        self.bdVar = StringVar() #determines whether we are selecting birth or death
         self.errorVar = StringVar()  ##This variable is for displaying a message regarding certain range errors
         self.countryVar = StringVar() #determines what country we are using
         ####################################################
@@ -352,7 +353,7 @@ class BuildGUI(Frame):
                 plt.text(idx, 5, insertText, verticalalignment='bottom',
                          horizontalalignment='center', rotation=90, fontsize=8)
             #sets the minimum value of width for the canvas
-            if (minWidthCheck) < self.MIN_WIDTH: #--#If the size is less than 6
+            if (minWidthCheck) < self.MIN_WIDTH: #---#If the size is less than 6
                 minWidthCheck = self.MIN_WIDTH
 
             if len(graphXYear)!=0: #Puts a little space around bars from the x-axis

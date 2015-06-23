@@ -2,6 +2,7 @@ from tkinter import *
 # import tkMessageBox
 from tkinter import ttk
 import sqlite3
+from math import floor, log10
 
 import matplotlib
 
@@ -23,7 +24,7 @@ class BuildGUI(Frame):
     MIN_WIDTH = 6
 
     #---#
-    MAX_Y_TICK = 100 #Information for the highest expected values
+    MAX_Y_TICK = 5000000 #Information for the highest expected values
 
     def __init__(self, root=None, sqlLocations=None):
         Frame.__init__(self)
@@ -41,7 +42,7 @@ class BuildGUI(Frame):
         #Sets up the variables we are going to use for the window
         self.spinVarStart = StringVar()  # spinner variable for the beginning year
         self.spinVarRange = StringVar()  # spinner value for the range of years
-        self.hivVar = StringVar() #determines the HIV data we are using
+        self.cmtVar = StringVar() #determines what the child death rate we are checking
         self.errorVar = StringVar()  ##This variable is for displaying a message regarding certain range errors
         self.countryVar = StringVar() #determines what country we are using
         ####################################################
@@ -121,21 +122,19 @@ class BuildGUI(Frame):
         labelText = "Select a region/demographic:"
         self.labelCountry = Label(self.root, text=labelText,
                                   justify=LEFT).grid(row=1, column=2, sticky=N+W)
-        self.labelHIVText = Label(self.root, text="Select HIV data")
-        self.labelHIVText.grid(row=2, column=1, sticky=W)
+        self.labelCMTText = Label(self.root, text="Select child mortality data")
+        self.labelCMTText.grid(row=2, column=1, sticky=W)
         ####################################################
         #Creates the radio buttons. I designed it to be modular so I can swap out data easily.
         self.dataInsert = []
         #---#
-        self.listRB = [["Women's share of population ages 15+ living with HIV (%)", "Women's share of population ages 15+ living with HIV (%)"],
-                       ["Prevalence of HIV, total (% of population ages 15-49)", "Prevalence of HIV, total (% of population ages 15-49)"],
-                       ["Prevalence of HIV, female (% ages 15-24)", "Prevalence of HIV, female (% ages 15-24)"],
-                       ["Prevalence of HIV, male (% ages 15-24)","Prevalence of HIV, male (% ages 15-24)"],
-                       ["Antiretroviral therapy coverage (% of people living with HIV)", "Antiretroviral therapy coverage (% of people living with HIV)"]]
+        self.listRB = [["Number of infant deaths", "Number of infant deaths"],
+                       ["Number of under-five deaths", "Number of under-five deaths"],
+                       ["Number of neonatal deaths", "Number of neonatal deaths"]]
 
         #cycles through the data provided to create the buttons
         for idxCreate, valueCreate in enumerate(self.listRB):
-            radioInsert =  Radiobutton(self.root, text=valueCreate[0], variable=self.hivVar,
+            radioInsert =  Radiobutton(self.root, text=valueCreate[0], variable=self.cmtVar,
                                         value=valueCreate[1], command=self.selectStuff)
             radioInsert.grid(row=idxCreate+3, column=1, sticky=W)
             self.dataInsert.append(radioInsert)
@@ -173,7 +172,7 @@ class BuildGUI(Frame):
         ####################################################
         #Creates the range of regions/demographics
         #---#
-        sql1 = "SELECT Country FROM \"Women's share of population ages 15+ living with HIV (%)\" ORDER BY Country ASC"
+        sql1 = "SELECT Country FROM \"Number of infant deaths\" ORDER BY Country ASC"
         insertList = [self.DEFAULT_TEXT_COMBO_BOX]
         maxLength = 0
         results = []
@@ -217,17 +216,17 @@ class BuildGUI(Frame):
         #What to do when an activation event has been triggered.
         self.checkRange()
         # sets the birth/death and region/demographic for our program
-        selectionHIV = ''
+        selectionCMT = ''
 
         #Sees if you have selected a region/demographic or not.
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
             #---#
-            selectionHIV = "%s \n%s." % (str(self.countryVar.get()),
-                                                  str(self.hivVar.get()))
+            selectionCMT = "%s \n%s." % (str(self.countryVar.get()),
+                                                  str(self.cmtVar.get()))
         else:
             #---#
-            selectionHIV = '''Please select a region/demographic for \n%s.''' % (str(self.hivVar.get()))
-        self.labelRadio['text']=selectionHIV
+            selectionCMT = '''Please select a region/demographic for \n%s.''' % (str(self.cmtVar.get()))
+        self.labelRadio['text']=selectionCMT
         #selectionRegion = str(self.countryVar.get())
         self.callGraph()
 
@@ -294,13 +293,13 @@ class BuildGUI(Frame):
     def callGraph(self):
         # This calls the graph function
 
-        graphYRate = [] #The ages that are called
+        graphYDeaths = [] #The ages that are called
         graphXYear = [] #The range of years we will use
         #graph0Values = [0] #This was meant for a possible situation where the values are empty, but currently
         #the way it's set up, the empty values default to 0 when being entered.
         #########################
         #---#
-        sqlGraph = 'SELECT * FROM \"%s\" WHERE Country="%s"' % (str(self.hivVar.get()), str(self.countryVar.get()))
+        sqlGraph = 'SELECT * FROM \"%s\" WHERE Country="%s"' % (str(self.cmtVar.get()), str(self.countryVar.get()))
 
         countryName = ''
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
@@ -316,48 +315,60 @@ class BuildGUI(Frame):
                 for idx, rowSQL in enumerate(convertedSQL[self.indexStartYear:self.indexStartYear + self.rangeIndex]):
                     #
                     graphXYear.append(str(self.startYear + idx))
-                    graphYRate.append(rowSQL)
+                    graphYDeaths.append(rowSQL)
             except:
                 print("Error: unable to retrieve data.")
             # Working on getting the stuff to display
+        #---# For ChildMortalityTotal
+        highestMagnitude = 0
+        for valueMagnitude in graphYDeaths:
+            if valueMagnitude == 0:
+                pass
+            elif int(floor(log10(valueMagnitude))) > highestMagnitude:
+                highestMagnitude = int(log10(valueMagnitude))
         #Sets up the information behind the scenes for the canvas to display the bars
         plt.clf()
         self.fig = plt.gcf()
         self.canvas = FigureCanvasTkAgg(self.fig, self.root) #Allows the Canvas to interface with the GUI
         ax = self.fig.add_subplot(111) #Allows the graph information
         #---#Sets the y axis to be between 0 and 100, marking every 5 points
-        major_ticksY = np.arange(-0, self.MAX_Y_TICK, 5)
+        major_ticksY = np.arange(-0, 10 ** (highestMagnitude+1), 10 ** (highestMagnitude))
         ax.set_yticks(major_ticksY)
         #Sets the x and y axis labels.
         ax.set_xlabel('Year')
         #---#
-        ax.set_ylabel("Percent.")
+        ax.set_ylabel("Deaths.")
 
 
         #If there is a region/demographic selected
         if str(self.countryVar.get()) != self.DEFAULT_TEXT_COMBO_BOX:
             #sets up the range of years to be used.
             x = np.arange(len(graphXYear))
-            #Sets up the bars to be used, x is the order of the bars, graphYRate is the height
-            plt.bar(x, graphYRate, color='aqua', width=.8, align='center')
+            #Sets up the bars to be used, x is the order of the bars, graphYDeaths is the height
+            plt.bar(x, graphYDeaths, color='aqua', width=.8, align='center')
             plt.xticks(x, graphXYear, rotation=90) #Sets up the ticks to be used
             minWidthCheck = len(graphXYear) * .4 #Sets up a minimum width
-            plt.axis([-0, self.rangeIndex, 0, self.MAX_Y_TICK]) #-#Sets up the axis limits, this case,
+            plt.axis([-0, self.rangeIndex, 0, 10 ** (highestMagnitude+1)]) #-#Sets up the axis limits, this case,
             plt.grid(True)
             #---#
             infoTitle = "\n%s \n%s \nOver A %s Year Period." % (
-                countryName, str(self.hivVar.get().capitalize()), str(self.rangeIndex))
+                countryName, str(self.cmtVar.get().capitalize()), str(self.rangeIndex))
             plt.title(infoTitle)
 
             #---#
             #Not necessary, but it adds the exact values alongside the graph bars, stating "No data available" if there is a 0
-            for idx, check0 in enumerate(graphYRate):
+            for idx, check0 in enumerate(graphYDeaths):
                 if check0 == 0:
                     insertText = "No data available."
                 else:
                     insertText = check0
-                plt.text(idx, 5, insertText, verticalalignment='bottom',
-                         horizontalalignment='center', rotation=90, fontsize=8)
+                #---# For ChildMortalityTotal
+                if insertText !="No data available." and float(insertText) < 2*10**(highestMagnitude):
+                    plt.text(idx, 2*10**(highestMagnitude), insertText, verticalalignment='bottom',
+                             horizontalalignment='left', rotation=90, fontsize=8)
+                else:
+                    plt.text(idx, 10**(highestMagnitude), insertText, verticalalignment='bottom',
+                             horizontalalignment='left', rotation=90, fontsize=8)
             #sets the minimum value of width for the canvas
             if (minWidthCheck) < self.MIN_WIDTH: #---#If the size is less than 6
                 minWidthCheck = self.MIN_WIDTH
@@ -372,7 +383,7 @@ class BuildGUI(Frame):
             plt.xticks([ 0 ], ['No Data Selected']) #Creates no xticks
             infoTitle = "Please Select A Region/Demographic."
             plt.title(infoTitle)
-            plt.axis([-0, 1, 0, self.MAX_Y_TICK])
+            plt.axis([-0, 1, 0, 10 ** (highestMagnitude+1)])
 
 
         self.fig.set_size_inches(minWidthCheck, self.SIZE * .5) #Sets the size
@@ -390,8 +401,8 @@ if __name__ == "__main__":
     rootB = Tk()
 
 
-    rootB.title("HIV Statistics.")
-    sqlLocations = '../../AllData/SQL_HIV_Rate.sqlite'
+    rootB.title("Child Mortality Statistics.")
+    sqlLocations = '../../AllData/SQL_ChildMortalityTotal_Rate.sqlite'
     sqlDB = sqlite3.connect(sqlLocations)
 
     guiBuild = BuildGUI(rootB, sqlDB)
