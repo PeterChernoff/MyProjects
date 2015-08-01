@@ -35,9 +35,10 @@ def random_date(start, end):
 
 #######################
 def runExchange(db, time_format, time_adjusted, testValue=(datetime.now() + timedelta(seconds=15)).strftime('%X')):
+    spacing = "\n=========================\n\n"
 
     while True:
-        print("Next automatic SQL Call at %s, hit 's' to start now, hit 't' to check how much time before the next automatic call, hit 'x' to exit." % time_adjusted)
+        print("Next automatic SQL Call at %s. \nHit 's' to start now. \nHit 't' to check how much time before the next automatic call. \nHit 'x' to exit." % time_adjusted)
         while True:
             #This internal while loop lets us wait until a certain keypress is made, or a certain amount of time passes.
 
@@ -52,11 +53,11 @@ def runExchange(db, time_format, time_adjusted, testValue=(datetime.now() + time
                 checkMe = chr(ord(msvcrt.getch()))
                 if (checkMe == 's'.lower()):
                     #Manually starts the process
-                    print("Manual activation commencing.")
+                    print("%sManual activation commencing."%spacing)
                     break
                 elif (checkMe == 'x'.lower()):
                     #Exits the program
-                    print("Exiting...")
+                    print("%sExiting..."%spacing)
                     return
                 elif (checkMe == 't'.lower()):
                     #Gives the time until the next scheduled update
@@ -67,12 +68,12 @@ def runExchange(db, time_format, time_adjusted, testValue=(datetime.now() + time
                     print("Time until next scheduled activation is: %s."%printTime)
             elif datetime.now().strftime('%X') == time_adjusted:
                 #Activates at the scheduled time
-                print("Scheduled activation commencing.")
+                print("%sScheduled activation commencing."%spacing)
                 break
             ##### To Delete	(but only comment out)
             elif datetime.now().strftime('%X') == testValue and debugMe:
                 #Activates a specified time after commencing, but only meant for deubug purposes.
-                print("Test activation commencing.")
+                print("%sTest activation commencing."%spacing)
                 break
             ##### /To Delete	(but only comment out)
 
@@ -181,8 +182,8 @@ def runExchange(db, time_format, time_adjusted, testValue=(datetime.now() + time
         except:
             print("Error: unable to fetch data sql3."	)
 
-        print("Selecting the 50 largest domain names from the email_table database.")
-        print("The results will be ordered by the largest percentage increase in the last 30 days.")
+        print("\nSelecting the 50 largest domain names from the email_table database.")
+        print("The results will be ordered by the largest percentage increase in the last 30 days.\n")
         sql4 = """SELECT domain, COUNT(*), domain_percent_increase
                 FROM email_table
                 GROUP BY domain
@@ -211,8 +212,9 @@ def runExchange(db, time_format, time_adjusted, testValue=(datetime.now() + time
         except:
             print("Error: unable to fetch data from sql4."	)
 
-        print("Cycle complete.")
+        print("\nCycle complete.")
         print("Last call completed at %s"%datetime.now().strftime("%Y-%m-%d %A, %H:%M:%S"))
+        print(spacing)
 
 
 #setting a time for us to activate
