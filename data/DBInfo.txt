@@ -1,0 +1,5 @@
+127.0.0.1
+3300
+UserPeter
+Test@Password12345
+INDEXEXCHANGE
