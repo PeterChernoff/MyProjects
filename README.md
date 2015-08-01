@@ -2,6 +2,7 @@
 Domain Name MySQL Database
 
 This runs in Python 2.7.
+Use the command line. This is designed for Windows.
 
 This was a project I did for Index Exchange as a test. I have modified it from its original form.
 
