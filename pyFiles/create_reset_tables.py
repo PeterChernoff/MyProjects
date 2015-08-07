@@ -112,11 +112,13 @@ if (activate):
 
 
 #This step lets us populate the table with some pre-existing data.
+
+
 activate = True
 if activate:
     f = open("../data/StartingValues.csv", "r")
     f.readline()
-
+    print("Adding default values...")
     for row in csv.reader(f):
         toDelete = row[0], row[1], row[2], row[3]
         sqlQuery = """INSERT INTO email_table (addr, domain, date_added, domain_percent_increase)
@@ -128,6 +130,8 @@ if activate:
         except:
             db.rollback()
             print("Addition failure")
+
+    print("Default values added.")
     f.close()
 
 
