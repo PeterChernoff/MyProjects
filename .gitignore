@@ -1,0 +1,76 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+/Life_Expectancy/Backup
+/Life_Expectancy/.ipynb_checkpoints
+/Life_Expectancy/.idea
+/Airport_Locations/.ipynb_checkpoints
+/Airport_Locations/Airport_Locations.ipynb
+/BirthDeath_Rate/AllData/Metadata_Country_8_Topic_en_csv_v2.csv
+/BirthDeath_Rate/AllData/Metadata_Indicator_8_Topic_en_csv_v2.csv
+/BirthDeath_Rate/AllData/\[Content_Types\].xml
+/HIV_Rates/AllData/\[Content_Types\].xml
+/HIV_Rates/AllData/Metadata_Country_8_Topic_en_csv_v2.csv
+/HIV_Rates/AllData/Metadata_Indicator_8_Topic_en_csv_v2.csv
+/BirthDeath_Rate/AllData/Metadata_Indicator_8_Topic_en_csv_v2.csv
+/BirthDeath_Rate/AllData/\[Content_Types\].xml
+/BirthDeath_Rate/AllData/Metadata_Country_8_Topic_en_csv_v2.csv
+/AllData/Metadata_Indicator_8_Topic_en_csv_v2.csv
+/AllData/Metadata_Country_8_Topic_en_csv_v2.csv
+/AllData/\[Content_Types\].xml
+/Life_Expectancy/.idea
+/Life_Expectancy/.ipynb_checkpoints
+/Life_Expectancy/Backup
+/Life_Expectancy/IPython
+/GUI_Data_Visualization/LifeExpectancy/.idea
+/GUI_Data_Visualization/LifeExpectancy/.ipynb_checkpoints
+/GUI_Data_Visualization/LifeExpectancy/Backup
+/GUI_Data_Visualization/LifeExpectancy/IPython
+/GUI_DV/LifeExpectancy/.idea
+/GUI_DV/LifeExpectancy/.ipynb_checkpoints
+/GUI_DV/LifeExpectancy/Backup
+/GUI_DV/LifeExpectancy/IPython
+/GUI_DataV/LifeExpectancy/.idea
+/GUI_DataV/LifeExpectancy/.ipynb_checkpoints
+/GUI_DataV/LifeExpectancy/Backup
+/GUI_DataV/LifeExpectancy/IPython
