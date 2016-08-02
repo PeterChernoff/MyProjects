@@ -1,6 +1,4 @@
-This contains some 3D work I've done.
-
-
+Peter_Chernoff_Tennis_Rig.max is an animation using a rig I built.
 
 The Pen Attribute Holder is not my work, though I use it in my rigging.
 
