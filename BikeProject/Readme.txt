@@ -5,3 +5,5 @@ It shows where these accidents take place, marking them on a map of Montreal, an
 Different parameters can be entered, so it can check between certain times and between certain dates, or excluding certain times and dates.
 
 There is a limit to the number of calls this program can make using the free version.
+
+This project uses the pandas, NumPy, matplotlib, geopy, smopy, and PyQt libraries.
