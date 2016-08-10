@@ -10,7 +10,7 @@ This project uses the [pandas](http://pandas.pydata.org/pandas-docs/stable/insta
 
 If pip is installed, the user can download the packages by typing:
 
-pip install [name of package]
+> pip install [name of package]
 
 
 This might not work with PyQt4 and may require alternate installation methods. See website for more details.
