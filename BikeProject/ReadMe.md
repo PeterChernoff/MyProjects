@@ -6,7 +6,11 @@ Different parameters can be entered, so it can check between certain times and b
 
 There is a limit to the number of calls this program can make using the free version.
 
-This project uses the [pandas](http://pandas.pydata.org/pandas-docs/stable/install.html), [NumPy](http://www.scipy.org/scipylib/download.html), [matplotlib](http://matplotlib.org/faq/installing_faq.html), [geopy](https://pypi.python.org/pypi/geopy), [smopy](https://pypi.python.org/pypi/smopy), and PyQt libraries.
+This project uses the [pandas](http://pandas.pydata.org/pandas-docs/stable/install.html), [NumPy](http://www.scipy.org/scipylib/download.html), [matplotlib](http://matplotlib.org/faq/installing_faq.html), [geopy](https://pypi.python.org/pypi/geopy), [smopy](https://pypi.python.org/pypi/smopy), and [PyQt4](http://pyqt.sourceforge.net/Docs/PyQt4/installation.html) libraries.
 
-If pip is installed, the user can 
+If pip is installed, the user can download the packages by typing:
 pip install [name of package]
+
+This might not work with PyQt4 and may require alternate installation methods. See website for more details.
+
+The [SciPy](https://www.scipy.org/install.html) package contains matplotlib, pandas, NumPy and several other libraries.
