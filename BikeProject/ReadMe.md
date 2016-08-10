@@ -6,4 +6,7 @@ Different parameters can be entered, so it can check between certain times and b
 
 There is a limit to the number of calls this program can make using the free version.
 
-This project uses the pandas, NumPy, matplotlib, geopy, smopy, and PyQt libraries.
+This project uses the [pandas](http://pandas.pydata.org/pandas-docs/stable/install.html), [NumPy](http://www.scipy.org/scipylib/download.html), [matplotlib](http://matplotlib.org/faq/installing_faq.html), [geopy](https://pypi.python.org/pypi/geopy), [smopy](https://pypi.python.org/pypi/smopy), and PyQt libraries.
+
+If pip is installed, the user can 
+pip install [name of package]
