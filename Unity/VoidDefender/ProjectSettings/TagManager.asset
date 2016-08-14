@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Projectile Layer
+  - PlayerPrefs
+  - destroyOnWin
+  - DefenderSpawn
+  - Enemy
+  - Defender
+  - Despawner
+  - ButtonSpawner
+  - ButtonDespawner
+  - LevelDisplay
+  - PauseBlock
+  - CurrentSelection
+  - InfoOutput
+  - TutorialPages
+  - CreditsPage
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Attacker
+  - Defender
+  - Projectile
+  - DefenderSpawn
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Spawn
+    uniqueID: 3500327567
+    locked: 0
+  - name: UISpawnLayer
+    uniqueID: 2571903981
+    locked: 0
+  - name: UISpawnLayerText
+    uniqueID: 2538661587
+    locked: 0

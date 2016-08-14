@@ -1,0 +1,1025 @@
+fileFormatVersion: 2
+guid: 5b6f0cf880e792049b989d045034453e
+timeCreated: 1470844881
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: EldritchSpriteSheet_entity_000__Attack_0
+    21300002: EldritchSpriteSheet_entity_000__Attack_1
+    21300004: EldritchSpriteSheet_entity_000__Attack_2
+    21300006: EldritchSpriteSheet_entity_000__Attack_3
+    21300008: EldritchSpriteSheet_entity_000__Attack_4
+    21300010: EldritchSpriteSheet_entity_000__Attack_5
+    21300012: EldritchSpriteSheet_entity_000__Attack_6
+    21300014: EldritchSpriteSheet_entity_000__Attack_7
+    21300016: EldritchSpriteSheet_entity_000__Attack_8
+    21300018: EldritchSpriteSheet_entity_000__Attack_9
+    21300020: EldritchSpriteSheet_entity_000__Attack_10
+    21300022: EldritchSpriteSheet_entity_000__Attack_11
+    21300024: EldritchSpriteSheet_entity_000__Attack_12
+    21300026: EldritchSpriteSheet_entity_000__Attack_13
+    21300028: EldritchSpriteSheet_entity_000__Attack_14
+    21300030: EldritchSpriteSheet_entity_000__Attack_15
+    21300032: EldritchSpriteSheet_entity_000__Attack_16
+    21300034: EldritchSpriteSheet_entity_000__Attack_17
+    21300036: EldritchSpriteSheet_entity_000__Attack_18
+    21300038: EldritchSpriteSheet_entity_000__Attack_19
+    21300040: EldritchSpriteSheet_entity_000__Attack_20
+    21300042: EldritchSpriteSheet_entity_000__Attack_21
+    21300044: EldritchSpriteSheet_entity_000__Attack_22
+    21300046: EldritchSpriteSheet_entity_000__Attack_23
+    21300048: EldritchSpriteSheet_entity_000__Attack_24
+    21300050: EldritchSpriteSheet_entity_000__Attack_25
+    21300052: EldritchSpriteSheet_entity_000__Attack_26
+    21300054: EldritchSpriteSheet_entity_000__Attack_27
+    21300056: EldritchSpriteSheet_entity_000__Attack_28
+    21300058: EldritchSpriteSheet_entity_000__Attack_29
+    21300060: EldritchSpriteSheet_entity_000_Attack_0
+    21300062: EldritchSpriteSheet_entity_000_Attack_1
+    21300064: EldritchSpriteSheet_entity_000_Attack_2
+    21300066: EldritchSpriteSheet_entity_000_Attack_3
+    21300068: EldritchSpriteSheet_entity_000_Attack_4
+    21300070: EldritchSpriteSheet_entity_000_Attack_5
+    21300072: EldritchSpriteSheet_entity_000_Attack_6
+    21300074: EldritchSpriteSheet_entity_000_Attack_7
+    21300076: EldritchSpriteSheet_entity_000_Attack_8
+    21300078: EldritchSpriteSheet_entity_000_Attack_9
+    21300080: EldritchSpriteSheet_entity_000_Attack_10
+    21300082: EldritchSpriteSheet_entity_000_Attack_11
+    21300084: EldritchSpriteSheet_entity_000_Attack_12
+    21300086: EldritchSpriteSheet_entity_000_Attack_13
+    21300088: EldritchSpriteSheet_entity_000_Attack_14
+    21300090: EldritchSpriteSheet_entity_000_Attack_15
+    21300092: EldritchSpriteSheet_entity_000_Attack_16
+    21300094: EldritchSpriteSheet_entity_000_Attack_17
+    21300096: EldritchSpriteSheet_entity_000_Attack_18
+    21300098: EldritchSpriteSheet_entity_000_Attack_19
+    21300100: EldritchSpriteSheet_entity_000_Attack_20
+    21300102: EldritchSpriteSheet_entity_000_Attack_21
+    21300104: EldritchSpriteSheet_entity_000_Attack_22
+    21300106: EldritchSpriteSheet_entity_000_Attack_23
+    21300108: EldritchSpriteSheet_entity_000_Attack_24
+    21300110: EldritchSpriteSheet_entity_000_Attack_25
+    21300112: EldritchSpriteSheet_entity_000_Attack_26
+    21300114: EldritchSpriteSheet_entity_000_Attack_27
+    21300116: EldritchSpriteSheet_entity_000_Attack_28
+    21300118: EldritchSpriteSheet_entity_000_Attack_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 133
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: EldritchSpriteSheet_entity_000_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 675
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -51.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -55.5}
+        - {x: 56, y: -51.5}
+      - - {x: 28, y: 38.5}
+        - {x: 20, y: 36.5}
+        - {x: 7, y: 28.5}
+        - {x: 1, y: 8.5}
+        - {x: 1, y: -32.5}
+        - {x: 16, y: -40.5}
+        - {x: 42, y: -40.5}
+        - {x: 50, y: -39.5}
+        - {x: 53, y: 1.5}
+        - {x: 53, y: 35.5}
+        - {x: 48, y: 38.5}
+      - - {x: 68, y: 29.5}
+        - {x: 56, y: 20.5}
+        - {x: 56, y: -26.5}
+        - {x: 67, y: -26.5}
+        - {x: 82, y: -1.5}
+        - {x: 82, y: 25.5}
+        - {x: 81, y: 29.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 675
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -51.5}
+        - {x: 20, y: -56.5}
+        - {x: 18, y: -62.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -57.5}
+        - {x: 53, y: -51.5}
+      - - {x: 20, y: 38.5}
+        - {x: 2, y: 5.5}
+        - {x: 2, y: -26.5}
+        - {x: 21, y: -41.5}
+        - {x: 52, y: -41.5}
+        - {x: 52, y: 38.5}
+      - - {x: 61, y: 37.5}
+        - {x: 58, y: 30.5}
+        - {x: 58, y: 3.5}
+        - {x: 60, y: -7.5}
+        - {x: 63, y: -16.5}
+        - {x: 65, y: -19.5}
+        - {x: 75, y: -19.5}
+        - {x: 79, y: 3.5}
+        - {x: 79, y: 32.5}
+        - {x: 73, y: 37.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 675
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: -51.5}
+        - {x: 18, y: -58.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -56.5}
+        - {x: 55, y: -51.5}
+      - - {x: 49, y: 38.5}
+        - {x: 17, y: 38.5}
+        - {x: 2, y: 12.5}
+        - {x: 2, y: -21.5}
+        - {x: 14, y: -41.5}
+        - {x: 47, y: -41.5}
+        - {x: 50, y: -36.5}
+        - {x: 52, y: -24.5}
+        - {x: 52, y: 36.5}
+      - - {x: 57, y: 44.5}
+        - {x: 54, y: 42.5}
+        - {x: 54, y: 21.5}
+        - {x: 56, y: 15.5}
+        - {x: 59, y: 3.5}
+        - {x: 65, y: -10.5}
+        - {x: 70, y: -11.5}
+        - {x: 76, y: -11.5}
+        - {x: 78, y: -8.5}
+        - {x: 78, y: 25.5}
+        - {x: 71, y: 44.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 675
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -54.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -59.5}
+        - {x: 52, y: -51.5}
+      - - {x: 25, y: 48.5}
+        - {x: 3, y: 29.5}
+        - {x: 3, y: -41.5}
+        - {x: 70, y: -41.5}
+        - {x: 79, y: -7.5}
+        - {x: 79, y: 48.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 675
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -51.5}
+        - {x: 18, y: -58.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -56.5}
+        - {x: 55, y: -51.5}
+      - - {x: 3, y: -0.5}
+        - {x: 3, y: -41.5}
+        - {x: 67, y: -41.5}
+        - {x: 79, y: -34.5}
+        - {x: 79, y: 43.5}
+        - {x: 75, y: 47.5}
+        - {x: 62, y: 50.5}
+        - {x: 23, y: 50.5}
+        - {x: 11, y: 27.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -51.5}
+        - {x: 18, y: -58.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -56.5}
+        - {x: 55, y: -51.5}
+      - - {x: 64, y: 50.5}
+        - {x: 21, y: 50.5}
+        - {x: 4, y: 44.5}
+        - {x: 4, y: -27.5}
+        - {x: 19, y: -41.5}
+        - {x: 49, y: -41.5}
+        - {x: 52, y: -27.5}
+        - {x: 77, y: 3.5}
+        - {x: 77, y: 28.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 540
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -57.5}
+        - {x: 52, y: -51.5}
+      - - {x: 57, y: 48.5}
+        - {x: 14, y: 48.5}
+        - {x: 5, y: 20.5}
+        - {x: 5, y: -25.5}
+        - {x: 13, y: -42.5}
+        - {x: 44, y: -42.5}
+        - {x: 51, y: -36.5}
+        - {x: 72, y: 1.5}
+        - {x: 72, y: 44.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 540
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 52, y: -51.5}
+      - - {x: 66, y: 38.5}
+        - {x: 49, y: 46.5}
+        - {x: 14, y: 46.5}
+        - {x: 5, y: 42.5}
+        - {x: 5, y: -31.5}
+        - {x: 19, y: -42.5}
+        - {x: 42, y: -42.5}
+        - {x: 50, y: -36.5}
+        - {x: 50, y: -26.5}
+        - {x: 66, y: 30.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 540
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 52, y: -51.5}
+      - - {x: 6, y: 45.5}
+        - {x: 2, y: 37.5}
+        - {x: 2, y: -22.5}
+        - {x: 20, y: -42.5}
+        - {x: 54, y: -42.5}
+        - {x: 58, y: -32.5}
+        - {x: 58, y: 45.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 540
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 19, y: -59.5}
+        - {x: 18, y: -62.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 51, y: -51.5}
+      - - {x: 24, y: 47.5}
+        - {x: 12, y: 40.5}
+        - {x: 0, y: 30.5}
+        - {x: 0, y: -8.5}
+        - {x: 11, y: -42.5}
+        - {x: 44, y: -42.5}
+        - {x: 50, y: -38.5}
+        - {x: 50, y: 47.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -52.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -66.5}
+        - {x: 57, y: -52.5}
+      - - {x: 7, y: 51.5}
+        - {x: 7, y: -24.5}
+        - {x: 15, y: -42.5}
+        - {x: 52, y: -42.5}
+        - {x: 68, y: 0.5}
+        - {x: 68, y: 47.5}
+        - {x: 52, y: 51.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 405
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: -52.5}
+        - {x: 24, y: -52.5}
+        - {x: 18, y: -60.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -65.5}
+        - {x: 57, y: -57.5}
+      - - {x: 28, y: 37.5}
+        - {x: 13, y: 29.5}
+        - {x: 7, y: 9.5}
+        - {x: 7, y: -25.5}
+        - {x: 14, y: -42.5}
+        - {x: 56, y: -42.5}
+        - {x: 56, y: 32.5}
+        - {x: 52, y: 37.5}
+      - - {x: 44, y: 61.5}
+        - {x: 41, y: 58.5}
+        - {x: 41, y: 41.5}
+        - {x: 71, y: 13.5}
+        - {x: 79, y: 13.5}
+        - {x: 81, y: 14.5}
+        - {x: 81, y: 25.5}
+        - {x: 80, y: 29.5}
+        - {x: 60, y: 59.5}
+        - {x: 51, y: 61.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 405
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -52.5}
+        - {x: 18, y: -60.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -65.5}
+        - {x: 57, y: -58.5}
+        - {x: 52, y: -52.5}
+      - - {x: 28, y: 36.5}
+        - {x: 7, y: 2.5}
+        - {x: 7, y: -24.5}
+        - {x: 17, y: -43.5}
+        - {x: 50, y: -43.5}
+        - {x: 61, y: -8.5}
+        - {x: 61, y: 34.5}
+        - {x: 56, y: 36.5}
+      - - {x: 88, y: 53.5}
+        - {x: 79, y: 53.5}
+        - {x: 76, y: 52.5}
+        - {x: 72, y: 39.5}
+        - {x: 72, y: 9.5}
+        - {x: 78, y: -3.5}
+        - {x: 85, y: -3.5}
+        - {x: 92, y: 7.5}
+        - {x: 93, y: 19.5}
+        - {x: 93, y: 43.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_13
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 405
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: -52.5}
+        - {x: 21, y: -52.5}
+        - {x: 18, y: -58.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+      - - {x: 40, y: 34.5}
+        - {x: 32, y: 29.5}
+        - {x: 7, y: -1.5}
+        - {x: 7, y: -25.5}
+        - {x: 18, y: -43.5}
+        - {x: 20, y: -44.5}
+        - {x: 49, y: -44.5}
+        - {x: 58, y: -36.5}
+        - {x: 65, y: -18.5}
+        - {x: 65, y: 29.5}
+        - {x: 62, y: 34.5}
+      - - {x: 116, y: 25.5}
+        - {x: 115, y: 26.5}
+        - {x: 100, y: 26.5}
+        - {x: 75, y: 1.5}
+        - {x: 75, y: -20.5}
+        - {x: 81, y: -20.5}
+        - {x: 92, y: -16.5}
+        - {x: 112, y: 5.5}
+        - {x: 116, y: 16.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 405
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -52.5}
+        - {x: 22, y: -52.5}
+        - {x: 18, y: -61.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -65.5}
+        - {x: 57, y: -58.5}
+      - - {x: 36, y: 33.5}
+        - {x: 6, y: -0.5}
+        - {x: 6, y: -30.5}
+        - {x: 26, y: -45.5}
+        - {x: 50, y: -45.5}
+        - {x: 56, y: -39.5}
+        - {x: 70, y: 1.5}
+        - {x: 70, y: 28.5}
+        - {x: 64, y: 33.5}
+      - - {x: 116, y: -10.5}
+        - {x: 101, y: -10.5}
+        - {x: 91, y: -13.5}
+        - {x: 82, y: -16.5}
+        - {x: 68, y: -23.5}
+        - {x: 68, y: -28.5}
+        - {x: 69, y: -32.5}
+        - {x: 97, y: -32.5}
+        - {x: 111, y: -31.5}
+        - {x: 120, y: -25.5}
+        - {x: 120, y: -11.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: -51.5}
+        - {x: 18, y: -56.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 54, y: -51.5}
+      - - {x: 72, y: -27.5}
+        - {x: 59, y: -27.5}
+        - {x: 59, y: -37.5}
+        - {x: 89, y: -61.5}
+        - {x: 108, y: -61.5}
+        - {x: 111, y: -56.5}
+        - {x: 111, y: -49.5}
+        - {x: 101, y: -36.5}
+      - - {x: 47, y: 31.5}
+        - {x: 38, y: 21.5}
+        - {x: 12, y: 8.5}
+        - {x: 6, y: -6.5}
+        - {x: 6, y: -24.5}
+        - {x: 11, y: -32.5}
+        - {x: 30, y: -45.5}
+        - {x: 58, y: -45.5}
+        - {x: 75, y: 2.5}
+        - {x: 75, y: 26.5}
+        - {x: 67, y: 31.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_16
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 270
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -51.5}
+        - {x: 24, y: -51.5}
+        - {x: 18, y: -60.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -66.5}
+        - {x: 57, y: -57.5}
+      - - {x: 66, y: -29.5}
+        - {x: 56, y: -29.5}
+        - {x: 55, y: -32.5}
+        - {x: 55, y: -38.5}
+        - {x: 77, y: -60.5}
+        - {x: 92, y: -64.5}
+        - {x: 106, y: -64.5}
+        - {x: 106, y: -49.5}
+        - {x: 101, y: -35.5}
+      - - {x: 40, y: 31.5}
+        - {x: 7, y: 10.5}
+        - {x: 7, y: -33.5}
+        - {x: 18, y: -45.5}
+        - {x: 60, y: -45.5}
+        - {x: 76, y: -2.5}
+        - {x: 76, y: 31.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 270
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: -51.5}
+        - {x: 18, y: -55.5}
+        - {x: 18, y: -67.5}
+        - {x: 55, y: -67.5}
+        - {x: 57, y: -65.5}
+        - {x: 57, y: -51.5}
+      - - {x: 40, y: 31.5}
+        - {x: 8, y: 1.5}
+        - {x: 8, y: -25.5}
+        - {x: 24, y: -52.5}
+        - {x: 75, y: -65.5}
+        - {x: 101, y: -65.5}
+        - {x: 101, y: -32.5}
+        - {x: 76, y: 31.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 270
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -51.5}
+        - {x: 18, y: -61.5}
+        - {x: 18, y: -65.5}
+        - {x: 20, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -64.5}
+        - {x: 57, y: -55.5}
+        - {x: 53, y: -51.5}
+      - - {x: 64, y: -32.5}
+        - {x: 83, y: 9.5}
+        - {x: 73, y: 31.5}
+        - {x: 42, y: 31.5}
+        - {x: 9, y: 6.5}
+        - {x: 9, y: -32.5}
+        - {x: 38, y: -48.5}
+        - {x: 78, y: -66.5}
+        - {x: 96, y: -66.5}
+        - {x: 96, y: -52.5}
+        - {x: 85, y: -42.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 270
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56, y: -57.5}
+        - {x: 53, y: -52.5}
+        - {x: 21, y: -52.5}
+        - {x: 18, y: -60.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+      - - {x: 44, y: 32.5}
+        - {x: 8, y: 1.5}
+        - {x: 8, y: -30.5}
+        - {x: 21, y: -54.5}
+        - {x: 38, y: -60.5}
+        - {x: 100, y: -60.5}
+        - {x: 100, y: 19.5}
+        - {x: 82, y: 32.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: -52.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -52.5}
+      - - {x: 38, y: 32.5}
+        - {x: 8, y: 10.5}
+        - {x: 8, y: -31.5}
+        - {x: 17, y: -54.5}
+        - {x: 103, y: -54.5}
+        - {x: 103, y: -5.5}
+        - {x: 74, y: 32.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_21
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -57.5}
+        - {x: 54, y: -52.5}
+        - {x: 22, y: -52.5}
+        - {x: 18, y: -59.5}
+      - - {x: 88, y: 24.5}
+        - {x: 72, y: 33.5}
+        - {x: 19, y: 33.5}
+        - {x: 7, y: 8.5}
+        - {x: 7, y: -41.5}
+        - {x: 21, y: -47.5}
+        - {x: 34, y: -49.5}
+        - {x: 106, y: -49.5}
+        - {x: 106, y: -35.5}
+        - {x: 101, y: -32.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_22
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -52.5}
+        - {x: 18, y: -57.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -58.5}
+        - {x: 54, y: -52.5}
+      - - {x: 76, y: 23.5}
+        - {x: 62, y: 34.5}
+        - {x: 32, y: 34.5}
+        - {x: 7, y: 9.5}
+        - {x: 7, y: -44.5}
+        - {x: 107, y: -44.5}
+        - {x: 107, y: -30.5}
+        - {x: 103, y: -23.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -52.5}
+        - {x: 18, y: -60.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -58.5}
+        - {x: 50, y: -52.5}
+      - - {x: 81, y: -16.5}
+        - {x: 63, y: -21.5}
+        - {x: 73, y: 31.5}
+        - {x: 61, y: 35.5}
+        - {x: 34, y: 35.5}
+        - {x: 6, y: -4.5}
+        - {x: 6, y: -30.5}
+        - {x: 9, y: -44.5}
+        - {x: 90, y: -44.5}
+        - {x: 107, y: -40.5}
+        - {x: 107, y: -19.5}
+        - {x: 95, y: -13.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_24
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -53.5}
+        - {x: 18, y: -56.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -56.5}
+        - {x: 53, y: -53.5}
+      - - {x: 102, y: -7.5}
+        - {x: 71, y: 35.5}
+        - {x: 31, y: 35.5}
+        - {x: 6, y: 4.5}
+        - {x: 6, y: -36.5}
+        - {x: 25, y: -43.5}
+        - {x: 69, y: -43.5}
+        - {x: 99, y: -30.5}
+        - {x: 106, y: -24.5}
+        - {x: 106, y: -14.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -53.5}
+        - {x: 18, y: -56.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -56.5}
+        - {x: 53, y: -53.5}
+      - - {x: 56, y: 36.5}
+        - {x: 34, y: 36.5}
+        - {x: 5, y: 8.5}
+        - {x: 5, y: -25.5}
+        - {x: 18, y: -43.5}
+        - {x: 50, y: -43.5}
+        - {x: 56, y: -27.5}
+        - {x: 64, y: 12.5}
+        - {x: 64, y: 33.5}
+      - - {x: 80, y: -2.5}
+        - {x: 52, y: -19.5}
+        - {x: 52, y: -35.5}
+        - {x: 71, y: -35.5}
+        - {x: 98, y: -30.5}
+        - {x: 104, y: -16.5}
+        - {x: 104, y: -2.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_26
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: -52.5}
+        - {x: 18, y: -54.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -52.5}
+      - - {x: 25, y: 37.5}
+        - {x: 4, y: 16.5}
+        - {x: 4, y: -33.5}
+        - {x: 9, y: -42.5}
+        - {x: 53, y: -42.5}
+        - {x: 62, y: -39.5}
+        - {x: 62, y: 37.5}
+      - - {x: 85, y: 4.5}
+        - {x: 62, y: -14.5}
+        - {x: 53, y: -26.5}
+        - {x: 53, y: -30.5}
+        - {x: 54, y: -34.5}
+        - {x: 71, y: -34.5}
+        - {x: 102, y: -12.5}
+        - {x: 102, y: 1.5}
+        - {x: 99, y: 4.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_27
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: -52.5}
+        - {x: 21, y: -52.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -58.5}
+        - {x: 54, y: -53.5}
+      - - {x: 32, y: 37.5}
+        - {x: 17, y: 29.5}
+        - {x: 5, y: 0.5}
+        - {x: 4, y: -7.5}
+        - {x: 4, y: -31.5}
+        - {x: 24, y: -42.5}
+        - {x: 52, y: -42.5}
+        - {x: 60, y: -12.5}
+        - {x: 60, y: 34.5}
+        - {x: 57, y: 37.5}
+      - - {x: 86, y: 11.5}
+        - {x: 76, y: 7.5}
+        - {x: 54, y: -22.5}
+        - {x: 54, y: -32.5}
+        - {x: 65, y: -32.5}
+        - {x: 96, y: -13.5}
+        - {x: 98, y: -7.5}
+        - {x: 98, y: 6.5}
+        - {x: 96, y: 11.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_28
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: -52.5}
+        - {x: 18, y: -62.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -53.5}
+        - {x: 53, y: -52.5}
+      - - {x: 26, y: 38.5}
+        - {x: 3, y: 0.5}
+        - {x: 3, y: -27.5}
+        - {x: 21, y: -41.5}
+        - {x: 57, y: -41.5}
+        - {x: 58, y: -30.5}
+        - {x: 58, y: 38.5}
+      - - {x: 79, y: 17.5}
+        - {x: 67, y: 8.5}
+        - {x: 55, y: -19.5}
+        - {x: 55, y: -31.5}
+        - {x: 67, y: -31.5}
+        - {x: 94, y: -8.5}
+        - {x: 94, y: 14.5}
+        - {x: 89, y: 17.5}
+    - name: EldritchSpriteSheet_entity_000_Attack_29
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -52.5}
+        - {x: 18, y: -58.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 56, y: -55.5}
+        - {x: 51, y: -52.5}
+      - - {x: 22, y: 38.5}
+        - {x: 2, y: 13.5}
+        - {x: 2, y: -24.5}
+        - {x: 21, y: -41.5}
+        - {x: 56, y: -41.5}
+        - {x: 56, y: 38.5}
+      - - {x: 78, y: 23.5}
+        - {x: 65, y: 15.5}
+        - {x: 56, y: -4.5}
+        - {x: 56, y: -28.5}
+        - {x: 57, y: -29.5}
+        - {x: 72, y: -29.5}
+        - {x: 79, y: -26.5}
+        - {x: 89, y: 3.5}
+        - {x: 89, y: 23.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

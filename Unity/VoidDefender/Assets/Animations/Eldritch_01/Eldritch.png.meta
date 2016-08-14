@@ -1,0 +1,125 @@
+fileFormatVersion: 2
+guid: 86ce4d67cedf69548a417aae33f31723
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Eldritch_Blink
+    21300002: Eldritch_Body
+    21300004: Eldritch_Eye
+    21300006: Eldritch_BackTentacle
+    21300008: Eldritch_Tail
+    21300010: Eldritch_FrontTentacle
+    21300012: Eldritch_MeanEye
+    21300014: Eldritch_HurtEye
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 133
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Eldritch_HurtEye
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 211
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eldritch_Body
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 139
+        width: 126
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eldritch_Eye
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 186
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eldritch_BackTentacle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 101
+        width: 56
+        height: 90
+      alignment: 9
+      pivot: {x: .254377872, y: .860525846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eldritch_MeanEye
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 115
+        width: 37
+        height: 34
+      alignment: 9
+      pivot: {x: .5, y: .831941962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eldritch_Tail
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 2
+        width: 39
+        height: 76
+      alignment: 9
+      pivot: {x: .355307758, y: .880532026}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eldritch_FrontTentacle
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 59
+        height: 95
+      alignment: 9
+      pivot: {x: .225022912, y: .863825738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

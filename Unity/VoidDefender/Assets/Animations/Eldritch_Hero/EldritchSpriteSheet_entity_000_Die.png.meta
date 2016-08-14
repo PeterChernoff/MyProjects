@@ -1,0 +1,353 @@
+fileFormatVersion: 2
+guid: c00cc23d12a94c2469fe42d8c8d6d5d5
+timeCreated: 1470844905
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: EldritchSpriteSheet_entity_000__Die_0
+    21300002: EldritchSpriteSheet_entity_000__Die_1
+    21300004: EldritchSpriteSheet_entity_000__Die_2
+    21300006: EldritchSpriteSheet_entity_000__Die_3
+    21300008: EldritchSpriteSheet_entity_000__Die_4
+    21300010: EldritchSpriteSheet_entity_000__Die_5
+    21300012: EldritchSpriteSheet_entity_000__Die_6
+    21300014: EldritchSpriteSheet_entity_000__Die_7
+    21300016: EldritchSpriteSheet_entity_000__Die_8
+    21300018: EldritchSpriteSheet_entity_000__Die_9
+    21300020: EldritchSpriteSheet_entity_000_Die_0
+    21300022: EldritchSpriteSheet_entity_000_Die_1
+    21300024: EldritchSpriteSheet_entity_000_Die_2
+    21300026: EldritchSpriteSheet_entity_000_Die_3
+    21300028: EldritchSpriteSheet_entity_000_Die_4
+    21300030: EldritchSpriteSheet_entity_000_Die_5
+    21300032: EldritchSpriteSheet_entity_000_Die_6
+    21300034: EldritchSpriteSheet_entity_000_Die_7
+    21300036: EldritchSpriteSheet_entity_000_Die_8
+    21300038: EldritchSpriteSheet_entity_000_Die_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 133
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: EldritchSpriteSheet_entity_000_Die_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -51.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -55.5}
+        - {x: 56, y: -51.5}
+      - - {x: 28, y: 38.5}
+        - {x: 20, y: 36.5}
+        - {x: 7, y: 28.5}
+        - {x: 1, y: 8.5}
+        - {x: 1, y: -32.5}
+        - {x: 16, y: -40.5}
+        - {x: 42, y: -40.5}
+        - {x: 50, y: -39.5}
+        - {x: 53, y: 1.5}
+        - {x: 53, y: 35.5}
+        - {x: 48, y: 38.5}
+      - - {x: 68, y: 29.5}
+        - {x: 56, y: 20.5}
+        - {x: 56, y: -26.5}
+        - {x: 67, y: -26.5}
+        - {x: 82, y: -1.5}
+        - {x: 82, y: 25.5}
+        - {x: 81, y: 29.5}
+    - name: EldritchSpriteSheet_entity_000_Die_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: -52.5}
+        - {x: 20, y: -52.5}
+        - {x: 18, y: -58.5}
+        - {x: 18, y: -67.5}
+        - {x: 56, y: -67.5}
+        - {x: 57, y: -66.5}
+        - {x: 57, y: -58.5}
+      - - {x: 22, y: 38.5}
+        - {x: 4, y: 14.5}
+        - {x: 4, y: -25.5}
+        - {x: 10, y: -41.5}
+        - {x: 67, y: -41.5}
+        - {x: 75, y: -37.5}
+        - {x: 75, y: 25.5}
+        - {x: 74, y: 38.5}
+    - name: EldritchSpriteSheet_entity_000_Die_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -52.5}
+        - {x: 18, y: -61.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -55.5}
+        - {x: 51, y: -52.5}
+      - - {x: 29, y: 36.5}
+        - {x: 23, y: 33.5}
+        - {x: 21, y: 26.5}
+        - {x: 9, y: 1.5}
+        - {x: 7, y: -6.5}
+        - {x: 7, y: -19.5}
+        - {x: 20, y: -42.5}
+        - {x: 45, y: -42.5}
+        - {x: 73, y: -30.5}
+        - {x: 73, y: 28.5}
+        - {x: 58, y: 36.5}
+    - name: EldritchSpriteSheet_entity_000_Die_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -52.5}
+        - {x: 18, y: -60.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -55.5}
+        - {x: 54, y: -52.5}
+      - - {x: 49, y: 35.5}
+        - {x: 24, y: 35.5}
+        - {x: 10, y: 15.5}
+        - {x: 10, y: -27.5}
+        - {x: 15, y: -42.5}
+        - {x: 50, y: -42.5}
+        - {x: 54, y: -41.5}
+        - {x: 75, y: -18.5}
+        - {x: 75, y: -10.5}
+        - {x: 58, y: 29.5}
+    - name: EldritchSpriteSheet_entity_000_Die_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 135
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 52, y: -51.5}
+      - - {x: 50, y: 34.5}
+        - {x: 31, y: 34.5}
+        - {x: 12, y: 6.5}
+        - {x: 12, y: -36.5}
+        - {x: 13, y: -43.5}
+        - {x: 51, y: -43.5}
+        - {x: 76, y: -19.5}
+        - {x: 76, y: -3.5}
+        - {x: 59, y: 27.5}
+    - name: EldritchSpriteSheet_entity_000_Die_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 52, y: -51.5}
+      - - {x: 76, y: 3.5}
+        - {x: 54, y: 34.5}
+        - {x: 27, y: 34.5}
+        - {x: 12, y: 1.5}
+        - {x: 12, y: -33.5}
+        - {x: 15, y: -42.5}
+        - {x: 19, y: -43.5}
+        - {x: 47, y: -43.5}
+        - {x: 51, y: -38.5}
+        - {x: 75, y: -17.5}
+        - {x: 76, y: -15.5}
+    - name: EldritchSpriteSheet_entity_000_Die_6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -51.5}
+        - {x: 18, y: -59.5}
+        - {x: 18, y: -65.5}
+        - {x: 19, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -58.5}
+        - {x: 52, y: -51.5}
+      - - {x: 55, y: 34.5}
+        - {x: 29, y: 34.5}
+        - {x: 12, y: 9.5}
+        - {x: 12, y: -37.5}
+        - {x: 15, y: -42.5}
+        - {x: 18, y: -43.5}
+        - {x: 53, y: -43.5}
+        - {x: 76, y: -19.5}
+        - {x: 76, y: -2.5}
+        - {x: 61, y: 27.5}
+    - name: EldritchSpriteSheet_entity_000_Die_7
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -51.5}
+        - {x: 18, y: -61.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -51.5}
+      - - {x: 27, y: 34.5}
+        - {x: 12, y: 5.5}
+        - {x: 12, y: -26.5}
+        - {x: 15, y: -43.5}
+        - {x: 54, y: -43.5}
+        - {x: 76, y: -22.5}
+        - {x: 76, y: 7.5}
+        - {x: 66, y: 34.5}
+    - name: EldritchSpriteSheet_entity_000_Die_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -51.5}
+        - {x: 18, y: -61.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -51.5}
+      - - {x: 54, y: 34.5}
+        - {x: 32, y: 34.5}
+        - {x: 12, y: 3.5}
+        - {x: 12, y: -27.5}
+        - {x: 15, y: -43.5}
+        - {x: 53, y: -43.5}
+        - {x: 76, y: -18.5}
+        - {x: 76, y: -5.5}
+        - {x: 69, y: 6.5}
+    - name: EldritchSpriteSheet_entity_000_Die_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 135
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: -51.5}
+        - {x: 18, y: -67.5}
+        - {x: 57, y: -67.5}
+        - {x: 57, y: -57.5}
+        - {x: 52, y: -51.5}
+      - - {x: 62, y: 34.5}
+        - {x: 25, y: 34.5}
+        - {x: 18, y: 33.5}
+        - {x: 12, y: 2.5}
+        - {x: 12, y: -18.5}
+        - {x: 13, y: -23.5}
+        - {x: 16, y: -42.5}
+        - {x: 19, y: -43.5}
+        - {x: 48, y: -43.5}
+        - {x: 51, y: -38.5}
+        - {x: 76, y: -21.5}
+        - {x: 76, y: 1.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,13 @@
+# C# scripts
+VoidDefender/*.csproj
+VoidDefender/*.sln
+
+# Folders
+VoidDefender/.vs/*
+VoidDefender/_Back/*
+VoidDefender/_Other_Assets/*
+VoidDefender/obj/*
+VoidDefender/Temp/*
+VoidDefender/Library/*
+VoidDefender/_Build/*
+VoidDefender/_WebGL/*
