@@ -1,22 +1,11 @@
 # The usual preamble
 import pandas as pd
-pd.set_option('display.width', 5000)
-pd.set_option('display.max_columns', 60)
-
-# Make the graphs a bit prettier, and bigger
-import matplotlib
-matplotlib.style.use('ggplot')
-from BikeProject.Classes.MtlMapRetrieval import GetMap
-
-
 
 from enum import Enum
 class UnknownTime(Enum):
 	include = 1
 	exclude = 2
 	only = 3
-
-from time import gmtime, strftime, strptime
 
 saveLocation = "../data/MTLBikeCollisions2006-2010.csv"
 
@@ -33,11 +22,11 @@ class BikeAccidents:
 		'''include_unknown_time'''
 		myAccidents = self.accidents
 		if (include_unknown_time.value == UnknownTime.only.value):
-			data = myAccidents[myAccidents['Time'].isnull()].copy()
+			data = myAccidents[myAccidents['Time'].isnull()].copy() #includes only the unknown times
 		elif (include_unknown_time.value == UnknownTime.exclude.value):
-			data = myAccidents[myAccidents['Time'].notnull()].copy()
+			data = myAccidents[myAccidents['Time'].notnull()].copy() #excludes the unknown times
 		else:
-			data = myAccidents.copy()
+			data = myAccidents.copy() #Gets both
 	
 		#to_datetime is to get the times to a more usable format
 		data.loc[:,'Time'] = pd.to_datetime(data['Time'])
@@ -52,6 +41,7 @@ class BikeAccidents:
 		#We might want to cover a range late at night from 23:00 to 1:00, so we want to have the option to wrap around
 		if (min_time <= max_time):
 			#The more intuitive, is the value between the lower value and the higher value.
+			#Checks between the initial time and the end time
 			data = data[
 				((data['Time'].isnull()) |
 				 (data['Time'] >= pd.to_datetime(min_time)) &
@@ -59,12 +49,13 @@ class BikeAccidents:
 		else:
 			#This isn't that complicated, but it can be unintuitive
 			#You just need to remember the "min_time" is the higher value
+			#This excludes the times between the initial time and the end time
 			data = data[
 				(data['Time'].isnull() |
 				 (data['Time'] >= pd.to_datetime(min_time)) |
 				 (data['Time'] <= pd.to_datetime(max_time)))]
 	
-		#similarly, we might want to exclude a range of dates
+		#similarly, we might want to include or exclude a range of dates
 		if (min_date <= max_date):
 			data = data[(data['Date'] >= pd.to_datetime(min_date)) &
 						(data['Date'] <= pd.to_datetime(max_date))]

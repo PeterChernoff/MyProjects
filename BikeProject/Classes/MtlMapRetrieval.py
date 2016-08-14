@@ -33,6 +33,7 @@ class GetMap:
 
 
 		#Calls map from OpenStreetMap, sets up coordinates for future use
+		
 		self.map = smopy.Map((lat-offLat, lon-offLon, lat+offLat, lon+offLon), z=zoomSize)
 		self.map.save_png(saveLocation)#Saves the file to be retrieved later
 
@@ -78,7 +79,7 @@ class GetMap:
 	def drawAccidentsByFrequency(self, datamap, topValues, popup=False):
 		self.setupMap()
 
-		geolocator = GoogleV3()#uses google's geolocator api
+		geolocator = GoogleV3(api_key='AIzaSyBMIjanF0RhgETaj31BXECZeq_3xGpfx-A')#uses google's geolocator api
 
 		lonLatList = []
 
