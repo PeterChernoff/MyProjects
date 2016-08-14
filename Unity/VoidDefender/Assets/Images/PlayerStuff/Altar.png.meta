@@ -1,0 +1,104 @@
+fileFormatVersion: 2
+guid: 19c2b4b4e525e544fa58ab25c5ed7d46
+timeCreated: 1469994738
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Altar_0
+    21300002: Altar_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 133
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Altar_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 254
+        width: 270
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -108, y: 46}
+        - {x: -135, y: 41}
+        - {x: -135, y: -20}
+        - {x: -83, y: -46}
+        - {x: 76, y: -46}
+        - {x: 135, y: -27}
+        - {x: 135, y: 27}
+        - {x: 118, y: 46}
+    - name: Altar_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 296
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 148, y: 26}
+        - {x: 148, y: 45}
+        - {x: 79, y: 76}
+        - {x: -65, y: 76}
+        - {x: -73, y: 75}
+        - {x: -126, y: 49}
+        - {x: -140, y: 29}
+        - {x: -131, y: -6}
+        - {x: -148, y: -31}
+        - {x: -148, y: -65}
+        - {x: -58, y: -76}
+        - {x: 53, y: -76}
+        - {x: 148, y: -64}
+        - {x: 148, y: -35}
+        - {x: 133, y: -3}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

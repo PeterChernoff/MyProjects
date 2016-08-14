@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 35be0781b8ac4fe40b99a502a13f0654
+timeCreated: 1470627002
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Eldritch_03_HurtEye
+    21300002: Eldritch_03_Body
+    21300004: Eldritch_03_Eye
+    21300006: Eldritch_03_BackTentacle
+    21300008: Eldritch_03_MeanEye
+    21300010: Eldritch_03_Tail
+    21300012: Eldritch_03_FrontTentacle
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 133
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Eldritch_03_HurtEye
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 212
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.5, y: 17.5}
+        - {x: -18.5, y: -0.5}
+        - {x: -14.5, y: -10.5}
+        - {x: -8.5, y: -17.5}
+        - {x: 11.5, y: -17.5}
+        - {x: 18.5, y: -6.5}
+        - {x: 18.5, y: 17.5}
+    - name: Eldritch_03_Body
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 120
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: 24}
+        - {x: 34, y: 62}
+        - {x: -34, y: 62}
+        - {x: -64, y: 25}
+        - {x: -64, y: -46}
+        - {x: -20, y: -62}
+        - {x: 22, y: -62}
+        - {x: 57, y: -39}
+        - {x: 64, y: 6}
+        - {x: 64, y: 21}
+    - name: Eldritch_03_Eye
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 187
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.5, y: 25.5}
+        - {x: -18.5, y: 23.5}
+        - {x: -18.5, y: -16.5}
+        - {x: -12.5, y: -25.5}
+        - {x: 11.5, y: -25.5}
+        - {x: 18.5, y: -19.5}
+        - {x: 18.5, y: 18.5}
+        - {x: 13.5, y: 25.5}
+    - name: Eldritch_03_BackTentacle
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 56
+        height: 90
+      alignment: 9
+      pivot: {x: 0.2182044, y: 0.8583025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.2194462, y: 12.752777}
+        - {x: -12.219446, y: -2.247223}
+        - {x: -12.219446, y: -13.247223}
+        - {x: 24.780554, y: -77.24722}
+        - {x: 38.780556, y: -77.24722}
+        - {x: 43.780556, y: -71.24722}
+        - {x: 43.780556, y: -14.247223}
+        - {x: 16.780554, y: 12.752777}
+    - name: Eldritch_03_MeanEye
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 116
+        width: 37
+        height: 34
+      alignment: 9
+      pivot: {x: 0.49072844, y: 0.7825165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.156952, y: 7.3944397}
+        - {x: -18.156952, y: -17.60556}
+        - {x: -12.156952, y: -26.60556}
+        - {x: 10.843048, y: -26.60556}
+        - {x: 18.843048, y: -20.60556}
+        - {x: 18.843048, y: 7.3944397}
+    - name: Eldritch_03_Tail
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 39
+        height: 76
+      alignment: 9
+      pivot: {x: 0.3680555, y: 0.8836805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.645836, y: 6.8402786}
+        - {x: 10.645836, y: 8.840279}
+        - {x: -5.354164, y: 8.840279}
+        - {x: -14.354164, y: 3.8402786}
+        - {x: -14.354164, y: -6.1597214}
+        - {x: 6.645836, y: -67.15972}
+        - {x: 17.645836, y: -67.15972}
+        - {x: 24.645836, y: -60.15972}
+        - {x: 24.645836, y: -10.159721}
+        - {x: 23.645836, y: -2.1597214}
+    - name: Eldritch_03_FrontTentacle
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 60
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25414354, y: 0.8502025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.751389, y: 14.380562}
+        - {x: -9.248611, y: 14.380562}
+        - {x: -15.248611, y: -1.6194382}
+        - {x: -15.248611, y: -12.619438}
+        - {x: 22.751389, y: -81.61944}
+        - {x: 44.75139, y: -81.61944}
+        - {x: 44.75139, y: -2.6194382}
+        - {x: 38.75139, y: 4.380562}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
