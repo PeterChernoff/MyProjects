@@ -9,6 +9,11 @@ public class LevelManager : MonoBehaviour {
 	//public MusicManager musicSpawn;
 	void Awake()
 	{
+		//If the game loads for the absolute first time, we want to set the defaults
+
+		if (!PlayerPrefs.HasKey(PlayerPrefsManager.MASTER_VOLUME_KEY)) PlayerPrefs.SetFloat(PlayerPrefsManager.MASTER_VOLUME_KEY, 0.5f);
+		if (!PlayerPrefs.HasKey(PlayerPrefsManager.MASTER_DIFFICULTY_KEY)) PlayerPrefs.SetFloat(PlayerPrefsManager.MASTER_DIFFICULTY_KEY, 2);
+
 		//Spawns a music player if we have none
 		if (!GameObject.FindGameObjectWithTag("MusicPlayer"))
 		{

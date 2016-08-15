@@ -8,12 +8,13 @@ using System.Collections;
 public class PlayerPrefsManager : MonoBehaviour {
 	//always use this for manipulating data for player prefs
 
-	const string MASTER_VOLUME_KEY = "master_volume";
-	const string MASTER_DIFFICULTY_KEY = "difficulty";
-	const string LEVEL_KEY = "level_unlocked_";//we want to have a template to send data
-	const string OPTIONS_KEY = "options";
+	public const string MASTER_VOLUME_KEY = "master_volume";
+	public const string MASTER_DIFFICULTY_KEY = "difficulty";
+	public const string LEVEL_KEY = "level_unlocked_";//we want to have a template to send data
+	public const string OPTIONS_KEY = "options";
     const int DEFAULT_OPTIONS_INDEX = 4;//this will be changed if there are any alterations
 	
+
 	public static void SetMasterVolume (float volume) {
 		if ((volume >= 0f) && (volume <= 1f)) {
 			PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, volume);
