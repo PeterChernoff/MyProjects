@@ -25,10 +25,6 @@ public class Credits : MonoBehaviour {
 
 		pages = pagesController.GetComponentsInChildren<NavigationPage>(true);
 
-		/*foreach (NavigationPage page in pages)
-		{
-			print(page.name);
-		}*/
 		DisplayCredits();
 
 		CheckButtons();

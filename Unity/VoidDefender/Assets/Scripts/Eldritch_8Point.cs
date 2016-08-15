@@ -27,13 +27,14 @@ public class Eldritch_8Point : MonoBehaviour
 			//abort if not colliding with Defender
 			return;
 		}
-		print(obj);
+		/*print(obj);
 		if (obj.GetComponent<Monolith>())
 		{
 			print("I'm dealing with a Monolith");
-		}
+		}*/
 		if (obj.GetComponent<Eldritch_Seal>()  && health.GetSealImmune())
 		{
+			//Eldritch Seals can kill when placed on top, unlike Monoliths which cannot impede if behind
 			//animate when the character can warp
 			anim.SetTrigger("warpTrigger");
 			notTired = false;

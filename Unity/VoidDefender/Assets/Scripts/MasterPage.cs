@@ -2,14 +2,5 @@
 using System.Collections;
 
 public class MasterPage : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	//Component to keep track of navigation pages
 }

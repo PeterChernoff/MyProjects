@@ -36,6 +36,7 @@ public class DarkEnergyDisplay : MonoBehaviour {
 	}
 	public Status UseDarkEnergy(int amount)
 	{
+		//Places Defender if we have enough energy
 		if (amount > darkEnergy)
 		{
 			return Status.FAILURE;

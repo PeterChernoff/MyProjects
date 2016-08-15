@@ -47,6 +47,7 @@ public class OptionsController : MonoBehaviour
 	}
 	public void DisplayEnemies()
 	{
+		//show off the extra enemies to represent difficulty
 		for (int i = 0; i < enemyDisplay.Length; i++)
 		{
 			if (i+sliderMin <= difficultySlider.value)

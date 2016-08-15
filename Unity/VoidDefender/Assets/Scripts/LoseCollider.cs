@@ -15,6 +15,7 @@ public class LoseCollider : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
+		//If an enemy gets past us, we lose
 		GameObject obj = col.gameObject;
 		if (!obj.GetComponent<Attacker>())
 		{

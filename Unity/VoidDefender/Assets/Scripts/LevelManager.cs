@@ -9,7 +9,12 @@ public class LevelManager : MonoBehaviour {
 	//public MusicManager musicSpawn;
 	void Awake()
 	{
-		GameObject musicSpawn = Instantiate(Resources.Load("Persistent Music Manager")) as GameObject;
+		//Spawns a music player if we have none
+		if (!GameObject.FindGameObjectWithTag("MusicPlayer"))
+		{
+			GameObject musicSpawn = Instantiate(Resources.Load("Persistent Music Manager")) as GameObject;
+		}
+		
 
 	}
 	void Start()

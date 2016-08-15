@@ -21,7 +21,7 @@ public class DefenderSpawner : MonoBehaviour {
 		parent = GameObject.Find("Defenders");
 		if (!parent)
 		{
-			parent = new GameObject("Defenders");//Need to name this as Projectiles
+			parent = new GameObject("Defenders");//Organizes the defenders to avoid cluttering up the editor
 
 		}
 		infoText.text = "";
@@ -57,7 +57,7 @@ public class DefenderSpawner : MonoBehaviour {
 				}
 				else if (hit.collider.tag == "Defender")
 				{
-					//we either skip spawning, or we use the despawn
+					//we either skip spawning, or we use the despawn option
 					despawn = CheckDespawn(hit.collider);
 					readyToSpawn = despawn;
 					
@@ -71,7 +71,7 @@ public class DefenderSpawner : MonoBehaviour {
 			}
 			if (readyToSpawn)
 			{
-				OnMouseDownAlt(despawn);//We either don't spawn or 
+				OnMouseDownAlt(despawn);//We either don't spawn or we don't
 			}
 			
 		}
@@ -79,6 +79,7 @@ public class DefenderSpawner : MonoBehaviour {
 
 	bool CheckDespawn(Collider2D collider)
 	{
+		//checks if we are currently using the despawner
 		defender = ButtonSpawn.selectedDefender;
 		infoText.text = "Space already occupied.";
 		if (defender.tag == "Despawner")

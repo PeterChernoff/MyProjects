@@ -29,7 +29,7 @@ public class Eldritch_7Point : MonoBehaviour
 		}
 		else if (obj.GetComponent<Eldritch_Seal>() && health.GetSealImmune())
 		{
-			print("Immune: " + health.GetSealImmune());
+			//print("Immune: " + health.GetSealImmune());
 			//animate when the character can warp
 			anim.SetTrigger("warpTrigger");
 

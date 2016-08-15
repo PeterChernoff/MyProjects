@@ -19,6 +19,7 @@ TagManager:
   - InfoOutput
   - TutorialPages
   - CreditsPage
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX

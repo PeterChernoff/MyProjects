@@ -19,10 +19,10 @@ public class SetVolume : MonoBehaviour {
 			Debug.LogWarning("No music manager found");
 		}
 
-		//ToDelete();
 	}
-	void ToDelete()
+	void TestSceneManager()
 	{
+		//Only for development
 		print(SceneManager.sceneCountInBuildSettings);
 		for (int i = 0; i< SceneManager.sceneCountInBuildSettings; i++)
 		{

@@ -11,7 +11,7 @@ public class FadeIn : MonoBehaviour
 	private Image fadePanel;
 	private Color currentColor;
 
-
+	//Alternative to the fade in animation
 	void Start() {
 		fadePanel = GetComponent<Image>();
 		currentColor = Color.black; //if we want to be able to edit the level, we only active fade on start

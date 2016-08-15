@@ -21,11 +21,13 @@ public class Projectile : MonoBehaviour {
 		Attacker attacker = collider.gameObject.GetComponent<Attacker>();
 		if (!attacker)
 		{
+			//skips things if the object is not an attacker
 			return;
 		}
 		Health health = collider.gameObject.GetComponent<Health>();
 		if (attacker && health && !hasHit)
 		{
+			//make sure this only gets invoked once
 			hasHit = true;
 			health.DealDamage(damage);
 			Destroy(gameObject);//destroy self

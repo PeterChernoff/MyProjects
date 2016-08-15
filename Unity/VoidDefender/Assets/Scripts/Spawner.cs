@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour {
 		parent = GameObject.Find("Enemies");
 		if (!parent)
 		{
-			parent = new GameObject("Enemies");//Need to name this as Projectiles
+			parent = new GameObject("Enemies");//creates an empty gameObject to tidy up
 
 		}
 	}
@@ -19,8 +19,11 @@ public class Spawner : MonoBehaviour {
 	void Update () {
 		if (Time.timeSinceLevelLoad > 10)
 		{
+			//We give the player 10 seconds to set things up
+			
 			foreach (GameObject thisAttacker in attackerPrefabArray)
 			{
+				//every type of spawner checks if they spawner. They also do so on average of a once every few seconds based on the spawn type
 				if (IsTimeToSpawn(thisAttacker))
 				{
 					Spawn(thisAttacker);
@@ -38,6 +41,7 @@ public class Spawner : MonoBehaviour {
 		float spawnsPerSecond = 1 / meanSpawnDelay;
 		if (Time.deltaTime > meanSpawnDelay)
 		{
+			//limits the total spawn rate
 			Debug.LogWarning("Spawn rate capped by frame rate");
 		}
 		float threshold = spawnsPerSecond * Time.deltaTime / 5;//divide by 5 lanes

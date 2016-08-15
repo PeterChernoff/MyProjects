@@ -24,6 +24,7 @@ public class Tutorial : MonoBehaviour {
 
 	void SetPage()
 	{
+		//disables the pages that are not in use and enables the ones that are
 		for (int i = 0; i< pages.Length; i++)
 		{
 			if (i != currentVal)
@@ -38,6 +39,7 @@ public class Tutorial : MonoBehaviour {
 	}
 	void IncrementPage()
 	{
+		//go to next page
 		if (currentVal < pages.Length)
 		{
 			currentVal++;
@@ -46,6 +48,7 @@ public class Tutorial : MonoBehaviour {
 	}
 	void DecrementPage()
 	{
+		//go to previous page
 		if (currentVal > 0)
 		{
 			currentVal--;

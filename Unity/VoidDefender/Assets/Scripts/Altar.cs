@@ -11,12 +11,13 @@ public class Altar : MonoBehaviour {
 	}
 	public void AddStarsManual()
 	{
-
+		//standard adding energy
 		starDisplay.AddDarkEnergy(starsToAdd);
 
 	}
 	public void AddStars(int amount)
 	{
+		//adding energy from animator
 		starDisplay.AddDarkEnergy(amount);
 	}
 

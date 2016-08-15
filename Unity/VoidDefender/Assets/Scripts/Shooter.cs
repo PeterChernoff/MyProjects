@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour {
 		parent = GameObject.Find("Projectiles");
 		if (!parent)
 		{
-			parent = new GameObject("Projectiles");//Need to name this as Projectiles
+			parent = new GameObject("Projectiles");//keeps things organized in the editor screen
 
 		}
 		SetMyLaneSpawner();
@@ -23,6 +23,7 @@ public class Shooter : MonoBehaviour {
 
 	void SetMyLaneSpawner()
 	{
+		//we want to make sure the attacks are lined up
 		Spawner[] spawnerArray = GameObject.FindObjectsOfType<Spawner>();
 		foreach (Spawner spawner in spawnerArray)
 		{
@@ -54,9 +55,10 @@ public class Shooter : MonoBehaviour {
 			return false;
 		}
 
-		//If there are attackers, are they ahead
+		//If there are attackers, are they ahead?
 		foreach (Transform attacker in myLaneSpawner.transform)//the gameObject.transform allows us to find children
 		{
+			//we only want to attack if the enemy is in front
 			if (attacker.position.x > transform.position.x)
 				return true;
 		}

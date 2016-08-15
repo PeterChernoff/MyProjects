@@ -91,7 +91,7 @@ public class GameTimer : MonoBehaviour {
 
 		foreach (GameObject enemy in killAttackers)
 		{
-			//I like to activate the kill enemies 
+			//kills all the enemies
 			enemy.GetComponent<Health>().DestroyObject();
 		}
 	}
