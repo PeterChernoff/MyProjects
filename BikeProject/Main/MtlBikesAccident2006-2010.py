@@ -15,8 +15,20 @@ from matplotlibwidget import MatplotlibWidget
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
-from Classes.MtlMapRetrieval import GetMap
-from Classes.MtlBikeAccidents2006_2010_Data import BikeAccidents
+
+'''
+#This make have to be
+from BikeProject.Classes.MtlMapRetrieval import GetMap
+from BikeProject.Classes.MtlBikeAccidents2006_2010_Data import BikeAccidents
+'''
+try:
+	from BikeProject.Classes.MtlMapRetrieval import GetMap
+except:
+	from Classes.MtlMapRetrieval import GetMap
+try:
+	from BikeProject.Classes.MtlBikeAccidents2006_2010_Data import BikeAccidents
+except:
+	from Classes.MtlBikeAccidents2006_2010_Data import BikeAccidents
 
 import matplotlib
 matplotlib.style.use('ggplot')
