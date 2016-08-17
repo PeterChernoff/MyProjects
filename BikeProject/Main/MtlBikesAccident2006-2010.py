@@ -15,8 +15,8 @@ from matplotlibwidget import MatplotlibWidget
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
-from BikeProject.Classes.MtlMapRetrieval import GetMap
-from BikeProject.Classes.MtlBikeAccidents2006_2010_Data import BikeAccidents
+from Classes.MtlMapRetrieval import GetMap
+from Classes.MtlBikeAccidents2006_2010_Data import BikeAccidents
 
 import matplotlib
 matplotlib.style.use('ggplot')
@@ -242,6 +242,7 @@ class Ui_MainWindow(object):
 		#Sets up variables for use in program
 		self.gm = GetMap()
 		self.img, self.fig, self.ax, self.imgplot = self.gm.getCurrentMap()
+		
 		self.bikeAccidents = BikeAccidents()
 		self.earliestDate = pd.to_datetime(self.bikeAccidents.min_date)
 		self.latestDate = pd.to_datetime(self.bikeAccidents.max_date)
