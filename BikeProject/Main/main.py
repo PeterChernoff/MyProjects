@@ -243,22 +243,25 @@ class UIMainWindow(object):
         self.combo_box_unknown_times.setItemText(1, _translate("main_window", "Do not", None))
         self.combo_box_unknown_times.setItemText(2, _translate("main_window", "Only", None))
         self.label_spinner.setText(_translate("main_window",
-                                             "Enter a value. It will pick the top most accident prone "
-                                             "locations given your parameters. API limits prevent too many "
-                                             "from being displayed.",
-                                             None))
+                                              "Enter a value. It will pick the top most accident prone "
+                                              "locations given your parameters. API limits prevent too many "
+                                              "from being displayed.", None))
         self.label.setText(_translate("main_window",
                                       "This program calculates and displays the most hazardous locations in "
                                       "Montreal for a cyclist  between certain hours of the day over a "
                                       "period of time.\n"
                                       "Please have a stable internet connection.", None))
         self.labelinfo_update.setText(_translate("main_window",
-                                                "You are getting the locations of accidents at the times between 0:00 and 23:59, between the dates of 2006-01-01 and 2010-12-31, including the accidents without specific times",
-                                                None))
+                                                 "You are getting the locations of accidents at the times "
+                                                 "between 0:00 and 23:59, between the dates of 2006-01-01 "
+                                                 "and 2010-12-31, including the accidents without specific "
+                                                 "times", None))
         self.matplotlib_map.setAutoFillBackground(True)
         self.btn_reset_map.setText(_translate("main_window", "Reset Map", None))
+
+        QtCore.QObject.connect(self.btnStart, QtCore.SIGNAL('clicked()'), self.calculate_data_map)
         
-        self.btnStart.clicked.connect(self.calculateDataMap)
+        self.btnStart.clicked.connect(self.calculate_data_map)
         self.btn_reset_map.clicked.connect(self.get_map)
         self.btn_reset_map.clicked.connect(self.change_data_parameters)
         
@@ -268,7 +271,7 @@ class UIMainWindow(object):
         self.check_box_day_end.stateChanged.connect(self.change_data_parameters)
         self.check_box_day_start.stateChanged.connect(self.change_data_parameters)
         
-        self.datePrimary.dateChanged.connect(self.change_data_parameters)
+        self.date_primary.dateChanged.connect(self.change_data_parameters)
         self.date_secondary.dateChanged.connect(self.change_data_parameters)
         self.time_edit_primary.timeChanged.connect(self.change_data_parameters)
         self.time_edit_secondary.timeChanged.connect(self.change_data_parameters)
