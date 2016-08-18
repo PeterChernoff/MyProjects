@@ -13,12 +13,13 @@ import pandas as pd
 from PyQt4 import QtCore, QtGui
 from matplotlibwidget import MatplotlibWidget
 
+from enum import Enum
+
 try:
     from getmap.getmap import GetMap
 except Exception:
     from getmap.getmap import GetMap
 try:
-    
     from bikeaccidents.bikeaccidents import BikeAccidents
 except Exception:
     from bikeaccidents.bikeaccidents import BikeAccidents
@@ -26,6 +27,7 @@ except Exception:
 import matplotlib
 
 matplotlib.style.use('ggplot')
+
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -42,7 +44,6 @@ try:
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
-from enum import Enum
 
 
 class UnknownTime(Enum):
@@ -55,12 +56,12 @@ class UnknownTime(Enum):
 class MyForm(QtGui.QMainWindow):
     def __init__(self, parent=None):
         QtGui.QWidget.__init__(self, parent)
-        self.ui = UIMainWindow()
-        self.ui.setup_ui(self)
+        self.ui = UIMainWindow(self)
+        # self.ui.setup_ui(self)
 
 
 class UIMainWindow(object):
-    def setup_ui(self, main_window):
+    def __init__(self, main_window):
         self.setup_vars()
         
         main_window.setObjectName(_fromUtf8("main_window"))
@@ -104,29 +105,29 @@ class UIMainWindow(object):
         self.time_edit_primary.setCalendarPopup(False)
         self.time_edit_primary.setObjectName(_fromUtf8("time_edit_primary"))
         self.grid_layout.addWidget(self.time_edit_primary, 4, 0, 1, 1)
-        self.labelPrimaryTime = QtGui.QLabel(self.centralwidget)
-        self.labelPrimaryTime.setObjectName(_fromUtf8("labelPrimaryTime"))
-        self.grid_layout.addWidget(self.labelPrimaryTime, 3, 0, 1, 1)
+        self.label_primary_time = QtGui.QLabel(self.centralwidget)
+        self.label_primary_time.setObjectName(_fromUtf8("label_primary_time"))
+        self.grid_layout.addWidget(self.label_primary_time, 3, 0, 1, 1)
         self.label_secondary_time = QtGui.QLabel(self.centralwidget)
         self.label_secondary_time.setObjectName(_fromUtf8("label_secondary_time"))
         self.grid_layout.addWidget(self.label_secondary_time, 3, 2, 1, 1)
-        spacerItem3 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
-        self.grid_layout.addItem(spacerItem3, 4, 6, 1, 1)
-        self.datePrimary = QtGui.QDateEdit(self.centralwidget)
-        self.datePrimary.setWrapping(True)
+        spacer_item3 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
+        self.grid_layout.addItem(spacer_item3, 4, 6, 1, 1)
+        self.date_primary = QtGui.QDateEdit(self.centralwidget)
+        self.date_primary.setWrapping(True)
         # Setting the min/max times at start
-        self.datePrimary.setDateTime(
+        self.date_primary.setDateTime(
             QtCore.QDateTime(QtCore.QDate(self.earliest_date.year, self.earliest_date.month, self.earliest_date.day),
                              QtCore.QTime(0, 0, 0)))
-        self.datePrimary.setMaximumDateTime(
+        self.date_primary.setMaximumDateTime(
             QtCore.QDateTime(QtCore.QDate(self.latest_date.year, self.latest_date.month, self.latest_date.day),
                              QtCore.QTime(23, 59, 59)))
-        self.datePrimary.setMinimumDateTime(
+        self.date_primary.setMinimumDateTime(
             QtCore.QDateTime(QtCore.QDate(self.earliest_date.year, self.earliest_date.month, self.earliest_date.day),
                              QtCore.QTime(0, 0, 0)))
-        self.datePrimary.setCalendarPopup(False)
-        self.datePrimary.setObjectName(_fromUtf8("datePrimary"))
-        self.grid_layout.addWidget(self.datePrimary, 14, 0, 1, 1)
+        self.date_primary.setCalendarPopup(False)
+        self.date_primary.setObjectName(_fromUtf8("date_primary"))
+        self.grid_layout.addWidget(self.date_primary, 14, 0, 1, 1)
         self.check_box_day_end = QtGui.QCheckBox(self.centralwidget)
         self.check_box_day_end.setChecked(False)
         self.check_box_day_end.setObjectName(_fromUtf8("check_box_day_end"))
@@ -230,7 +231,7 @@ class UIMainWindow(object):
                                           None))
         self.label_unknown_times.setText(_translate("main_window", "include unknown times", None))
         self.time_edit_primary.setDisplayFormat(_translate("main_window", "hh:mm", None))
-        self.labelPrimaryTime.setText(_translate("main_window", "Enter the primary time", None))
+        self.label_primary_time.setText(_translate("main_window", "Enter the primary time", None))
         self.label_secondary_time.setText(_translate("main_window", "Enter the secondary time", None))
         self.check_box_day_end.setText(_translate("main_window", "Finish at the end of the day", None))
         self.label_secondary_date.setText(_translate("main_window", "Enter the secondary date", None))
@@ -289,17 +290,17 @@ class UIMainWindow(object):
         self.latest_date = pd.to_datetime(self.bike_accidents.max_date)
         self.getting_looking = "looking for"
     
-    def calculateDataMap(self):
+    def calculate_data_map(self):
         self.getting_looking = "getting"
         self.change_data_parameters()
         
         # Filters out the data
         data = self.bike_accidents.accident_range(start_time=self.time_edit_primary.time().toString(),
-                                                 end_time=self.time_edit_secondary.time().toString(),
-                                                 include_unknown_time=self.includeUnknown,
-                                                 start_date=self.pdate.strftime("%Y-%m-%d"),
-                                                 end_date=self.sdate.strftime("%Y-%m-%d"),
-                                                 )
+                                                  end_time=self.time_edit_secondary.time().toString(),
+                                                  include_unknown_time=self.include_unknown,
+                                                  start_date=self.pdate.strftime("%Y-%m-%d"),
+                                                  end_date=self.sdate.strftime("%Y-%m-%d"),
+                                                  )
         
         data_accident_location = self.bike_accidents.accident_count(data)  # Groups the data according to location
         self.gm.draw_accidents_by_frequency(data_accident_location, self.top_accidents)
@@ -324,7 +325,7 @@ class UIMainWindow(object):
             # Set up so is time date
             self.pdate = self.earliest_date
         else:
-            self.pdate = pd.to_datetime(self.datePrimary.date().toString())
+            self.pdate = pd.to_datetime(self.date_primary.date().toString())
         
         if self.check_box_date_end.isChecked():
             # Set up so is time date
@@ -332,7 +333,7 @@ class UIMainWindow(object):
         else:
             self.sdate = pd.to_datetime(self.date_secondary.date().toString())
         
-        pdateY, pDateM, pDateD = self.pdate.year, self.pdate.month, self.pdate.day
+        pdate_y, p_date_m, p_date_d = self.pdate.year, self.pdate.month, self.pdate.day
         sdate_y, sdate_m, sdate_d = self.sdate.year, self.sdate.month, self.sdate.day
         
         if self.check_box_day_start.isChecked():
@@ -351,36 +352,36 @@ class UIMainWindow(object):
         # We want to either get the dates between certain dates, or dates not between certain dates
         if self.sdate >= self.pdate:
             date_between_text = "between"
-            mid_date_time_frame = "{}-{:02d}-{:02d} and {}-{:02d}-{:02d}".format(pdateY, pDateM, pDateD, sdate_y, sdate_m,
-                                                                              sdate_d)
+            mid_date_time_frame = "{}-{:02d}-{:02d} and {}-{:02d}-{:02d}".format(pdate_y, p_date_m, p_date_d, sdate_y,
+                                                                                 sdate_m, sdate_d)
         else:
             date_between_text = "between " + self.earliest_date.strftime(
                 "%Y-%m-%d") + " and " + self.latest_date.strftime("%Y-%m-%d") + ", excluding the dates between"
-            mid_date_time_frame = "{}-{:02d}-{:02d} and {}-{:02d}-{:02d}".format(sdate_y, sdate_m, sdate_d, pdateY, pDateM,
-                                                                              pDateD)
+            mid_date_time_frame = "{}-{:02d}-{:02d} and {}-{:02d}-{:02d}".format(sdate_y, sdate_m, sdate_d,
+                                                                                 pdate_y, p_date_m, p_date_d)
         
         end_text = "the accidents without specific times."
-        
+        unknown_time_text = ""
         if self.combo_box_unknown_times.currentText() == "Only":
-            timeBetweenText = ""
+            time_between_text = ""
             unknown_time_text = "only using"
-            self.includeUnknown = UnknownTime.only
+            self.include_unknown = UnknownTime.only
         else:
             if self.stime >= self.ptime:
-                timeBetweenText = "at the times between "
-                timeBetweenText += "{}:{:02d} and {}:{:02d},".format(ptime_h, ptime_m, stime_h, stime_m)
+                time_between_text = "at the times between "
+                time_between_text += "{}:{:02d} and {}:{:02d},".format(ptime_h, ptime_m, stime_h, stime_m)
             
             else:
-                timeBetweenText = "excluding the times between "
-                timeBetweenText += "{}:{:02d} and {}:{:02d},".format(stime_h, stime_m, ptime_h, ptime_m)
+                time_between_text = "excluding the times between "
+                time_between_text += "{}:{:02d} and {}:{:02d},".format(stime_h, stime_m, ptime_h, ptime_m)
             
             if self.combo_box_unknown_times.currentText() == "Do":
                 unknown_time_text = "including"
-                self.includeUnknown = UnknownTime.include
+                self.include_unknown = UnknownTime.include
             
             elif self.combo_box_unknown_times.currentText() == "Do not":
                 unknown_time_text = "not including"
-                self.includeUnknown = UnknownTime.exclude
+                self.include_unknown = UnknownTime.exclude
         
         if self.top_accidents == 1:
             self.location_text = "location"
@@ -389,11 +390,15 @@ class UIMainWindow(object):
             self.location_text = "locations"
             self.accident_text = str(self.top_accidents) + " "
         
-        text = "You are {getting_looking} the top {accident_text}accident {location_text} {timeBetweenText} {date_between_text} {timeFrame}, " \
-               "{unknown_time_text} {end_text}".format(
-            getting_looking=self.getting_looking, accident_text=self.accident_text, location_text=self.location_text,
-            timeBetweenText=timeBetweenText, date_between_text=date_between_text, timeFrame=mid_date_time_frame,
-            unknown_time_text=unknown_time_text, end_text=end_text)
+        text = 'You are {getting_looking} the top {accident_text}accident {location_text} ' \
+               '{time_between_text} {date_between_text} {time_frame}, ' \
+               '{unknown_time_text} {end_text}'.format(
+            getting_looking=self.getting_looking, accident_text=self.accident_text,
+            location_text=self.location_text,
+            time_between_text=time_between_text, date_between_text=date_between_text,
+            unknown_time_text=unknown_time_text,
+            time_frame=mid_date_time_frame,
+            end_text=end_text)
         
         self.labelinfo_update.setText(text)
         
