@@ -295,8 +295,8 @@ class UIMainWindow(object):
         self.change_data_parameters()
         
         # Filters out the data
-        data = self.bike_accidents.accident_range(start_time=self.time_edit_primary.time().toString(),
-                                                  end_time=self.time_edit_secondary.time().toString(),
+        data = self.bike_accidents.accident_range(start_time=self.ptime,
+                                                  end_time=self.stime,
                                                   include_unknown_time=self.include_unknown,
                                                   start_date=self.pdate.strftime("%Y-%m-%d"),
                                                   end_date=self.sdate.strftime("%Y-%m-%d"),
