@@ -4,4 +4,11 @@ Unity/VoidDefender/VoidDefender.zip
 *.idea/
 /BikeProject/.idea
 /BikeProject/HolderFolder/
+/BikeProject/bikeaccidents/ApiKey
+
 /.idea
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
