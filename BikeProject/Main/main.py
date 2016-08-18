@@ -340,16 +340,16 @@ class UIMainWindow(object):
         sdate_y, sdate_m, sdate_d = self.sdate.year, self.sdate.month, self.sdate.day
         
         if self.check_box_day_start.isChecked():
-            self.ptime = pd.to_datetime("0:00", format='%H:%M')
+            self.ptime = pd.to_datetime("0:00:00")
         else:
-            self.ptime = pd.to_datetime(self.time_edit_primary.time().toString())
+            self.ptime = pd.to_datetime(self.time_edit_primary.time().toString(), format='%H:%M:%S')
         
         ptime_h, ptime_m = self.ptime.hour, self.ptime.minute
         if self.check_box_day_end.isChecked():
-            self.stime = pd.to_datetime("23:59", format='%H:%M')
+            self.stime = pd.to_datetime("23:59:59")
         else:
             self.stime = pd.to_datetime(self.time_edit_secondary.time().toString())
-        
+            
         stime_h, stime_m = self.stime.hour, self.stime.minute
         
         # We want to either get the dates between certain dates, or dates not between certain dates
