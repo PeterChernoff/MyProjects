@@ -13,17 +13,14 @@ import pandas as pd
 from PyQt4 import QtCore, QtGui
 from matplotlibwidget import MatplotlibWidget
 
-'''
-#This make have to be
-from BikeProject.bikeaccidents.MtlMapRetrieval import GetMap
-from BikeProject.bikeaccidents.MtlBikeAccidents2006_2010_Data import BikeAccidents
-'''
+
 try:
-	from BikeProject.getmap import GetMap
+	from getmap.getmap import GetMap
 except:
 	from getmap.getmap import GetMap
 try:
-	from BikeProject.bikeaccidents import BikeAccidents
+
+	from bikeaccidents.bikeaccidents import BikeAccidents
 except:
 	from bikeaccidents.bikeaccidents import BikeAccidents
 
