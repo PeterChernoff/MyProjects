@@ -4,6 +4,7 @@ Unity/VoidDefender/VoidDefender.zip
 *.idea/
 /BikeProject/.idea
 /BikeProject/HolderFolder/
+/BikeProject/HolderFolder/*
 /BikeProject/bikeaccidents/ApiKey
 
 /.idea
