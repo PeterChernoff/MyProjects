@@ -958,7 +958,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 307723924}
   m_Layer: 5
-  m_Name: Celestial
+  m_Name: A New Horizon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,7 +1104,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: http://miyolophone.newgrounds.com/
+          m_StringArgument: http://omgl33th4x0r.newgrounds.com/
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Miyolophone
+  m_Text: OMGL33TH4X0R
 --- !u!222 &314534442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3326,7 +3326,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: http://www.newgrounds.com/audio/listen/595572
+          m_StringArgument: http://www.newgrounds.com/audio/listen/527540
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -3363,7 +3363,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Celestial
+  m_Text: A New Horizon
 --- !u!222 &784672384
 CanvasRenderer:
   m_ObjectHideFlags: 0
