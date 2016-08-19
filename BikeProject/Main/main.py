@@ -339,6 +339,7 @@ class UIMainWindow(object):
         pdate_y, p_date_m, p_date_d = self.pdate.year, self.pdate.month, self.pdate.day
         sdate_y, sdate_m, sdate_d = self.sdate.year, self.sdate.month, self.sdate.day
         
+        # using pandas Timestamps for formatting
         if self.check_box_day_start.isChecked():
             self.ptime = pd.to_datetime("00:00:00")
         else:
