@@ -340,7 +340,7 @@ class UIMainWindow(object):
         sdate_y, sdate_m, sdate_d = self.sdate.year, self.sdate.month, self.sdate.day
         
         if self.check_box_day_start.isChecked():
-            self.ptime = pd.to_datetime("0:00:00")
+            self.ptime = pd.to_datetime("00:00:00")
         else:
             self.ptime = pd.to_datetime(self.time_edit_primary.time().toString(), format='%H:%M:%S')
         
