@@ -14,3 +14,4 @@ __pycache__/
 *.py[cod]
 
 BikeProject/main/store
+BikeProject/ignore/
