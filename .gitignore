@@ -3,8 +3,8 @@ Unity/VoidDefender/VoidDefender.zip
 
 *.idea/
 /BikeProject/.idea
-/BikeProject/HolderFolder/
-/BikeProject/HolderFolder/*
+/BikeProject/HolderFolder
+/BikeProject/HolderFolder/MtlBikeAccidents2006_2010_Data_Bak.py
 /BikeProject/bikeaccidents/ApiKey
 
 /.idea
@@ -14,4 +14,3 @@ __pycache__/
 *.py[cod]
 
 BikeProject/main/store
-/BikeProject/HolderFolder
