@@ -128,17 +128,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelMusicPreGame:
   - {fileID: 0}
-  - {fileID: 8300000, guid: e7822705cc9a49649aa3b55b075b82a2, type: 3}
+  - {fileID: 8300000, guid: 19f3ff613702bc44c98d9761e27e4034, type: 3}
   - {fileID: 8300000, guid: f0f0ff16d7fa45a4db960d9740c77ed0, type: 3}
   - {fileID: 8300000, guid: 7717d344e9f68ca4082fb040b033aa0a, type: 3}
   - {fileID: 8300000, guid: ff2dffcaa25c7e84393ccba290d4470e, type: 3}
   levelMusicGame:
   - {fileID: 8300000, guid: 19f3ff613702bc44c98d9761e27e4034, type: 3}
   - {fileID: 8300000, guid: 8b5c5cacae2700d40b2e58957fd85faf, type: 3}
-  - {fileID: 8300000, guid: 6a20b41dd2fb89141b242a9fde445ad5, type: 3}
+  - {fileID: 8300000, guid: f5e71f316d1c9ff44ad62019198a3ffd, type: 3}
   - {fileID: 8300000, guid: fb2e5ef1005ef4f4494c4e731ecdaaab, type: 3}
   - {fileID: 8300000, guid: 744dc6e1a3e1d184f8a3e441270c0ee6, type: 3}
-  - {fileID: 8300000, guid: 14c4e161587533b408240832c1f4da31, type: 3}
+  - {fileID: 8300000, guid: 8ff2395a90308594d81e275c69796e11, type: 3}
   - {fileID: 8300000, guid: 94511a2f2ae18bf429c27bf485dc0418, type: 3}
   levelMusicPostGame:
   - {fileID: 8300000, guid: 67bbfa03010bdb0449228c65ebb6d4fa, type: 3}
