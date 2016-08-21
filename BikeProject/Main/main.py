@@ -8,21 +8,22 @@
 # WARNING! All changes made in this file will be lost!
 
 import sys
+from enum import Enum
 
 import pandas as pd
 from PyQt4 import QtCore, QtGui
 from matplotlibwidget import MatplotlibWidget
 
-from enum import Enum
 
 try:
-    from getmap.getmap import GetMap
+    from BikeProject.getmap.getmap import GetMap
 except Exception:
     from getmap.getmap import GetMap
 try:
-    from bikeaccidents.bikeaccidents import BikeAccidents
+    from BikeProject.bikeaccidents.bikeaccidents import BikeAccidents
 except Exception:
     from bikeaccidents.bikeaccidents import BikeAccidents
+
 
 import matplotlib
 
