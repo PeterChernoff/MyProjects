@@ -1025,7 +1025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSeconds: 100
-  winMusic: {fileID: 8300000, guid: 147aa3cf822412847a6ef6b490f4c6cb, type: 3}
+  winMusic: {fileID: 8300000, guid: e1e77ac9df0b04942ad66174815d5b29, type: 3}
 --- !u!114 &114000013720041428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1525,7 +1525,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 268, y: 393.75}
-  m_SizeDelta: {x: 135.6, y: 112.5}
+  m_SizeDelta: {x: 140, y: 112.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012251507718
 RectTransform:
