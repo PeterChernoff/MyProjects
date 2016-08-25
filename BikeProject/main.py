@@ -14,16 +14,9 @@ import pandas as pd
 from PyQt4 import QtCore, QtGui
 from matplotlibwidget import MatplotlibWidget
 
+from getmap.getmap import GetMap
 
-try:
-    from BikeProject.getmap.getmap import GetMap
-except Exception:
-    from getmap.getmap import GetMap
-try:
-    from BikeProject.bikeaccidents.bikeaccidents import BikeAccidents
-except Exception:
-    from bikeaccidents.bikeaccidents import BikeAccidents
-
+from bikeaccidents.bikeaccidents import BikeAccidents
 
 import matplotlib
 
