@@ -64,7 +64,7 @@ class MyForm(QtGui.QMainWindow):
 class UIMainWindow(object):
     def __init__(self, main_window):
         self.setup_vars()
-        
+        print("Setting up GUI")
         main_window.setObjectName(_fromUtf8("main_window"))
         main_window.resize(850, 858)
         self.centralwidget = QtGui.QWidget(main_window)
@@ -285,6 +285,7 @@ class UIMainWindow(object):
         self.get_map()
     
     def setup_vars(self):
+        print("Loading map...")
         # Sets up variables for use in program
         self.gm = GetMap()
         self.img, self.fig, self.ax, self.imgplot = self.gm.get_current_map()
