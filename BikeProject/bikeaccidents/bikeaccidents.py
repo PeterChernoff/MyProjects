@@ -3,7 +3,7 @@ import pandas as pd
 
 from enum import Enum
 
-saveLocation = "../data/MTLBikeCollisions2006-2010.csv"
+saveLocation = "data/MTLBikeCollisions2006-2010.csv"
 
 
 class UnknownTime(Enum):

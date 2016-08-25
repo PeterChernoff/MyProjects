@@ -23,9 +23,9 @@ fig_width = fig_height * 5 / 3
 
 tlat = np.linspace(lat - offLat, lat + offLat, 7)
 tlon = np.linspace(lon - offLon, lon + offLon, 11)
-save_location = '../Data/montreal.png'
-savefigs = '../Data/test.png'
-locationFile = '../Data/locations.json'
+save_location = 'Data/montreal.png'
+savefigs = 'Data/test.pdf'
+locationFile = 'Data/locations.json'
 
 
 class GetMap:
@@ -34,7 +34,10 @@ class GetMap:
         # Calls map from OpenStreetMap, sets up coordinates for future use
         
         self.map = smopy.Map((lat - offLat, lon - offLon, lat + offLat, lon + offLon), z=zoomSize)
-        self.map.save_png(save_location)  # Saves the file to be retrieved later
+        try:
+            self.map
+        except:
+            self.map.save_png(save_location)  # Saves the file to be retrieved later
         self.dict_location = self.load_dictionary
     
         # we have several variables that we will want to set up multiple times,
